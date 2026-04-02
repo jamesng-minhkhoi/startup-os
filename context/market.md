@@ -1,25 +1,39 @@
 # Market Context
 
-<!-- Fill this in when doing market research. Updated by /compete and /gtm workflows. -->
-
 ## Market Size
-- **TAM**: 
-- **SAM**: 
-- **SOM**: 
-- **Methodology**: <!-- Top-down or bottom-up? Show your work. -->
+- **TAM**: $15.6B global pet tech (2025) → $52.9B by 2035 (12% CAGR)
+- **SAM**: $868M U.S. pet care apps (2025). AI pet care segment growing at 14.92% CAGR (fastest in pet tech)
+- **SOM**: AI-first pet care apps for Millennial/Gen Z pet parents with behavior/wellness/allergen needs
+- **Methodology**: Bottom-up from app market sizing + AI segment growth. Vet telehealth alone is $747M → $3.34B by 2034.
+- **Investment**: $660M+ VC into pet tech in 2025 (103% rise vs. 2024). Dedicated pet health funds launching.
 
-## Competitive Landscape
-- **Direct Competitors**: 
-- **Indirect Competitors**: 
-- **Substitutes**: <!-- Including "do nothing" and spreadsheets -->
-- **Our Moat**: 
+## Competitive Landscape (AI-First)
+
+### Direct Competitors (AI Chat + Scanner)
+- **DongoPet**: AI vet chatbot + food scanner. Closest all-in-one. Early-stage, lacks behavior focus.
+- **SafePet**: AI dental scan + food scanner + health tracking. Dental-focused, not behavior/wellness.
+- **Pawcode**: AI Q&A + barcode scanner + price comparison. Early-stage, money-saving angle.
+
+### AI Chatbot Competitors (No Scanner)
+- **Daisy** (3.3 stars, low traction), **PetGenius** (vet-built, narrow), **Dr. Tail** ($20/answer, async), **PetCare AI** (broad but unclear traction), **TTcare** (photo diagnostics, $5/mo)
+
+### Scanner Competitors (No AI Chat)
+- **Hapu**: Strongest. AI label reading + safety scores personalized to pet. WATCH THIS ONE.
+- **Pawdi**: 300K+ products, A-F grading. Users dislike scan limits.
+- **Max**, **Safe Pet Treats**: Basic scanners.
+
+### Telehealth (Human Vets — Different Model)
+- **Pawp** ($24/mo), **Vetster** ($50-70/visit), **AskVet** ($29/mo — has behavior via human trainers)
+
+### The Gap Petio Owns
+No competitor combines: (1) deep-context AI chatbot + (2) personalized product scanner + (3) behavior/wellness focus. DongoPet is closest but lacks behavior and deep personalization.
 
 ## Market Trends
-- **Tailwinds**: <!-- Trends working in our favor -->
-- **Headwinds**: <!-- Trends working against us -->
-- **Technology Shifts**: 
+- **Tailwinds**: AI pet care is fastest-growing segment (14.92% CAGR); $660M+ VC funding in 2025; Gen Z most open to pet-tech (46%); shift to preventive care; "pet humanization" macro trend
+- **Headwinds**: ChatGPT as free alternative; AI trust/liability concerns; 77% app churn in 3 days; subscription fatigue
+- **Technology Shifts**: AI-personalized health, photo-based diagnostics (TTcare), connected device ecosystems (PETKIT), telehealth normalization
 
 ## Adoption Lifecycle Position
-- **Where We Are**: <!-- Innovators / Early Adopters / Early Majority / Late Majority -->
-- **Chasm Status**: <!-- Pre-chasm / Crossing / Post-chasm -->
-- **Beachhead Segment**: 
+- **Where We Are**: Innovators → Early Adopters (AI pet care is nascent)
+- **Chasm Status**: Pre-chasm. Category itself is still forming.
+- **Beachhead Segment**: Pet parents with allergy-prone pets (clearest pain + highest scanner usage) OR first-time owners (highest question volume)

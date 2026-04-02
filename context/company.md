@@ -1,30 +1,29 @@
 # Company Context
 
-<!-- Fill this in when starting a new project. All workflows read this file. -->
-
 ## Identity
-- **Company Name**: 
-- **One-liner**: <!-- What you do in one sentence -->
-- **Stage**: <!-- Pre-idea / Idea / Pre-revenue / Revenue / Growth / Scale -->
-- **Founded**: 
-- **Location**: 
+- **Company Name**: Petio
+- **One-liner**: Your pet's life, perfectly organized
+- **Stage**: Pre-revenue / Early launch
+- **Founded**: 2026
+- **Location**: <!-- TBD -->
+- **Website**: https://petiogo.com
 
 ## Vision & Mission
-- **Vision** (10-year): 
-- **Mission** (what you do today): 
-- **Core Values** (3-5): 
+- **Vision (10-year)**: <!-- To be defined -->
+- **Mission (what you do today)**: Centralize pet care management — health tracking, reminders, documents, and family coordination — in one beautiful app
+- **Core Values (3-5)**: <!-- To be defined -->
 
 ## Team
-- **Founders**: 
-- **Team Size**: 
-- **Key Hires Needed**: 
+- **Founders**: James Nguyen (Full-stack mobile engineer)
+- **Team Size**: Solo founder
+- **Key Hires Needed**: <!-- To be determined -->
 
 ## Funding
-- **Funding Stage**: <!-- Bootstrapped / Pre-seed / Seed / Series A -->
-- **Total Raised**: 
-- **Runway**: 
+- **Funding Stage**: Bootstrapped
+- **Total Raised**: $0
+- **Runway**: N/A (bootstrapped)
 
-## EOS Essentials (if using Traction/EOS)
-- **Core Focus**: 
-- **Visionary**: 
-- **Integrator**: 
+## EOS Essentials
+- **Core Focus**: <!-- To be defined during /review -->
+- **Visionary**: James
+- **Integrator**: <!-- Needed -->
