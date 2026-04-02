@@ -179,6 +179,53 @@ The secondary research moves the needle. Here's what changed:
 
 ---
 
+## 9. ADDITIONAL DATA POINTS (from industry reports & veterinary literature)
+
+### The Perception Gap Is the Real Market
+
+- Only 1-2% of dogs have clinically confirmed food allergies, BUT **30-50% of pet owners believe their pet has food sensitivity** (APPA, Banfield surveys)
+- This means the addressable market is **"owners who believe"** (15-25M households), not "dogs with confirmed allergies" (1-6M)
+- Owners make food decisions based on **belief and anxiety**, not clinical evidence (proven by the grain-free trend generating billions despite FDA concerns)
+
+### Label Literacy Is Abysmal
+
+- **Fewer than 20% of pet owners** can correctly interpret a pet food ingredient panel (veterinary nutrition studies)
+- **Ingredient splitting** (listing rice, rice flour, rice bran separately) fools most consumers
+- The "first ingredient" heuristic is the most common shortcut — but it's misleading (measured by weight before processing)
+- Owners report spending **15-45 minutes** comparing labels in-store for allergy-affected pets
+
+### Behavioral Patterns (from forums & communities)
+
+- Owners **photograph food labels** and share in Facebook groups asking "is this safe?"
+- They maintain **handwritten or spreadsheet logs** of foods tried and reactions
+- They **distrust mainstream brands** and gravitate toward boutique/small-batch brands
+- They **cross-reference ingredients obsessively**, sometimes 30+ minutes in a pet store aisle
+- After finding what works, they show **extremely high brand loyalty** — fear of triggering reaction keeps them locked in
+
+### Spending Willingness
+
+- Allergy-affected pet owners spend **2-3x more** than average on vet care annually
+- **Apoquel** costs ~$2-3/day; **Cytopoint** injections $50-150 every 4-8 weeks
+- Pet health anxiety correlates with **30-50% higher spending** on pet care overall
+- Willingness to pay for a pet health app: surveys suggest **$5-15/month** sweet spot, higher among allergy owners
+
+### AI Trust Nuance
+
+- ~**40-45% of pet owners** say they'd trust AI-generated advice (AVMA-adjacent surveys)
+- Trust is **higher for informational/triage** ("should I go to the vet?") and **lower for treatment** ("what should I feed?")
+- Millennials/Gen Z: **55-65%** willing to use AI for pet care vs. older: 25-35%
+- Key trust builders: vet endorsement, transparency about limitations, connection to real vet
+- Framing matters: **"smart food scanner"** lands better than **"AI-powered"** with skeptical owners
+
+### Recall Anxiety = Retention Feature
+
+- FDA tracks ~50-100 pet food recalls annually
+- **85%+ of pet owners** would switch brands immediately after a recall
+- Only **~30%** actively monitor recalls — most learn weeks later via social media
+- Real-time recall alerts tied to a pet's food profile = **high-value retention feature**
+
+---
+
 ## Sources
 
 - [Merck Vet Manual — Food Allergy in Animals](https://www.merckvetmanual.com/integumentary-system/food-allergy/cutaneous-food-allergy-in-animals)
