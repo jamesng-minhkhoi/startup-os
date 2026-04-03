@@ -26,7 +26,7 @@
 - **Pawp** ($24/mo), **Vetster** ($50-70/visit), **AskVet** ($29/mo — has behavior via human trainers)
 
 ### The Gap Petio Owns
-No competitor combines: (1) deep-context AI chatbot + (2) personalized product scanner + (3) behavior/wellness focus. DongoPet is closest but lacks behavior and deep personalization.
+No competitor combines: (1) deep-context AI chatbot + (2) personalized product scanner + (3) behavior/wellness focus + (4) emotional pet journaling (memories). DongoPet is closest but lacks behavior, deep personalization, and the emotional layer. The memories/photo journal feature creates retention and emotional switching costs that pure utility apps lack.
 
 ## Market Trends
 - **Tailwinds**: AI pet care is fastest-growing segment (14.92% CAGR); $660M+ VC funding in 2025; Gen Z most open to pet-tech (46%); shift to preventive care; "pet humanization" macro trend
