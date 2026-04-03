@@ -30,11 +30,16 @@
 - App crash rate — must stay < 1%
 - Chat response latency — must stay < 3s
 
-## OKRs (Current Quarter)
+## OKRs (Current Quarter — Q2 2026)
 ### Objective 1: Launch and validate AI-first positioning
-- KR1: Ship AI chat + product scanner to App Store
-- KR2: 100 organic installs in first 30 days
-- KR3: 30% of active users send 3+ AI chat messages in week 1
+- KR1: Ship AI chat + product scanner to App Store ✅ (live on iOS)
+- KR2: 100 organic installs in first 30 days (not yet measured — need GSC + analytics)
+- KR3: 30% of active users send 3+ AI chat messages in week 1 (not yet measured)
+
+### Objective 2: Build organic acquisition engine
+- KR1: 5 SEO blog posts live ✅ (done — 5 posts with cited sources, personal voice)
+- KR2: Submit to Google Search Console + Bing Webmaster (TODO)
+- KR3: First organic search traffic to blog (TODO — measure after indexing)
 
 ## Financial Metrics
 - **MRR/ARR**: $0 (pre-launch)

@@ -3,7 +3,7 @@
 ## Identity
 - **Company Name**: Petio
 - **One-liner**: AI pet care that knows your pet personally
-- **Stage**: Pre-revenue / Early launch
+- **Stage**: Pre-revenue / Live on iOS App Store
 - **Founded**: 2025 (MVP started June 2025)
 - **Location**: <!-- TBD -->
 - **Website**: https://petiogo.com

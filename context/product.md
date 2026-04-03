@@ -5,7 +5,7 @@
 - **Category**: AI-first pet care & wellness
 - **Platform**: Mobile (iOS & Android)
 - **Tech Stack**: React Native / Expo, Supabase
-- **Website**: https://petiogo.com (pre-pivot — website reflects old positioning)
+- **Website**: https://petiogo.com (updated — reflects AI-first positioning)
 
 ## Problem & Solution
 - **Core Problem**: Pet parents lack personalized, contextual guidance for their pet's behavior, wellness, and safety — they rely on generic Google searches, guesswork, and expensive vet visits for everyday questions.
@@ -64,3 +64,53 @@
   - Free: 1 pet, 1 family, 5 documents, limited AI chat, 3 memories/day
   - Plus: $2.92/mo ($34.99/year) — unlimited pets, families, documents, AI chat, product scanner, advanced insights
 - **Unit Economics**: <!-- To be measured -->
+
+## Website & Content (petiogo.com)
+- **Stack**: Next.js 16, Tailwind v4, Framer Motion, Radix, Lenis smooth scroll
+- **SEO**: Sitemap, robots.txt, JSON-LD (SoftwareApplication, Organization, FAQPage, BlogPosting), Open Graph, canonical URLs, llms.txt for AI search
+- **Analytics**: Google Analytics (G-NX2Y1CWL97), Microsoft Clarity
+- **Blog**: 5 SEO-researched articles with MDX, tag filtering, pagination, TOC, related posts
+- **Content topics**: Dog food safety, food allergies, puppy guides, pet food recalls, AI pet care thought leadership
+
+## What's Been Completed (as of 2026-04-03)
+
+### Mobile App (petio-mobile)
+- App live on iOS App Store
+- Major codebase refactoring: split 5 mega-files, consolidated duplication, removed 32 dead files
+- Design system improvements: shadow/size tokens, StyleProps, centralized haptics/motion
+- 0 TypeScript errors (fixed 248 pre-existing)
+- 10 unused npm dependencies removed
+- Reminders feature removed (zero engagement)
+- PR #133 (refactoring) and PR #134 (james-develop → main) created
+
+### Landing Page (petio-landingpage)
+- H1 and messaging updated to AI-first positioning
+- Feature cards updated: "Smart Reminders" → "AI Assistant"
+- Blog system: MDX with Callout/QuickAnswer/StatCard components, tag filters, load-more pagination, sticky TOC, related posts, reading progress bar
+- 5 quality blog posts (2000-2500 words each, cited sources, personal voice)
+- SEO: robots.txt, dynamic sitemap, FAQPage schema, Organization schema, BlogPosting schema, OG tags on all pages, llms.txt
+- Google Analytics + Microsoft Clarity installed
+- Scroll performance fixed (removed backdrop-blur glitch)
+- All broken footer links fixed
+
+## What's Next (Prioritized)
+
+### Immediate (This Week)
+1. **Submit sitemap to Google Search Console** — manual step, critical for indexing
+2. **Submit to Bing Webmaster Tools** — powers Copilot + ChatGPT browse
+3. **Remove reminders from mobile app** — code still exists, tab still shows, need to remove the tab + routes
+4. **App Store screenshots/description update** — reflect AI-first positioning, not "organized"
+
+### Short-Term (This Month)
+5. **Write "Can My Cat Eat That?" blog post** — mirror dog food post for cat audience (untapped keyword volume)
+6. **Build interactive food safety checker** — free tool at /tools/food-checker, highly linkable
+7. **Customer interviews** — 0 post-pivot validation done (customers.md notes this)
+8. **Product Hunt launch** — backlinks + discovery
+9. **Google Play listing** — app not yet on Play Store
+
+### Medium-Term (This Quarter)
+10. **Measure North Star metric** — weekly AI chat sessions per active user
+11. **Set up analytics events** — track activation (profile + first chat), scanner usage, memory creation
+12. **A/B test onboarding** — current survey → paywall flow needs validation
+13. **Content: 5 more blog posts** targeting high-volume queries (puppy feeding, vet visit frequency, pet insurance, cat behavior)
+14. **ASO (App Store Optimization)** — keywords, screenshots, description for AI pet care queries
