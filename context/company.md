@@ -4,7 +4,7 @@
 - **Company Name**: Petio
 - **One-liner**: AI pet care that knows your pet personally
 - **Stage**: Pre-revenue / Early launch
-- **Founded**: 2026
+- **Founded**: 2025 (MVP started June 2025)
 - **Location**: <!-- TBD -->
 - **Website**: https://petiogo.com
 
@@ -17,16 +17,23 @@
   3. **Beautiful by default** — visual richness, real images over icons, no filler text
 
 ## Team
-- **Founders**: James Nguyen (Full-stack mobile engineer)
-- **Team Size**: Solo founder
-- **Key Hires Needed**: <!-- To be determined -->
+- **Founders** (3):
+  - **James Nguyen** — Developer / Product (55% equity)
+  - **Xuan Ngoc** — Designer (22.5% equity, part of 45% shared)
+  - **Trang Ha Vy** — Product / Marketing (22.5% equity, part of 45% shared)
+- **Team Size**: 3 co-founders
+- **Key Hires Needed**: None immediately — team covers dev, design, product, and marketing
 
 ## Funding
 - **Funding Stage**: Bootstrapped
 - **Total Raised**: $0
-- **Runway**: N/A (bootstrapped)
+- **Total Spent**: ~$470
+  - $300 — App design (external)
+  - $120 — Apple Developer Membership (2025)
+  - $50 — Google Play Developer (2025)
+- **Runway**: N/A (all founders contributing equity, no salaries)
 
 ## EOS Essentials
 - **Core Focus**: <!-- To be defined during /review -->
 - **Visionary**: James
-- **Integrator**: <!-- Needed -->
+- **Integrator**: Trang Ha Vy

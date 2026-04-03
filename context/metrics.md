@@ -38,7 +38,7 @@
 
 ## Financial Metrics
 - **MRR/ARR**: $0 (pre-launch)
-- **Burn Rate**: Minimal (bootstrapped, solo founder)
+- **Burn Rate**: ~$0/mo (3 co-founders on equity, no salaries, no infra costs beyond dev accounts)
 - **Runway**: N/A
 - **LTV**: <!-- To be measured post-launch -->
 - **CAC**: <!-- To be measured post-launch -->
