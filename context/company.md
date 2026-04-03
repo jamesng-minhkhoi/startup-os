@@ -2,7 +2,7 @@
 
 ## Identity
 - **Company Name**: Petio
-- **One-liner**: Your pet's life, perfectly organized
+- **One-liner**: AI pet care that knows your pet personally
 - **Stage**: Pre-revenue / Early launch
 - **Founded**: 2026
 - **Location**: <!-- TBD -->
@@ -10,7 +10,7 @@
 
 ## Vision & Mission
 - **Vision (10-year)**: <!-- To be defined -->
-- **Mission (what you do today)**: Centralize pet care management — health tracking, reminders, documents, and family coordination — in one beautiful app
+- **Mission (what you do today)**: AI-first pet care — personalized behavior guidance, wellness insights, and product safety scanning, backed by your pet's full health profile
 - **Core Values (3-5)**: <!-- To be defined -->
 
 ## Team

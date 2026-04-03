@@ -18,9 +18,11 @@
 2. **Product Scanner**: Scan pet food/treat/product barcodes to detect allergens and unsafe ingredients specific to the user's pet. Early risk detection for pets with allergies or sensitivities.
 3. **Behavior & Wellness Focus**: Understanding and managing pet behavior (anxiety, aggression, training), wellness tracking, preventive care guidance.
 4. **Health Tracking** (retained from v1): Weight, vaccinations, medications, symptoms with visual trends.
-5. **Smart Reminders** (retained from v1): Automated notifications for care tasks.
-6. **Document Storage** (retained from v1): Pet passports, invoices, IDs with PDF export.
-7. **Family Sync** (retained from v1): Multi-member coordination.
+5. **Document Storage** (retained from v1): Pet passports, invoices, IDs with PDF export.
+6. **Family Sync** (retained from v1): Multi-member coordination.
+
+### Removed Features
+- **Smart Reminders**: Removed — zero real user engagement despite being a core v1 tab. Users don't adopt reminder workflows for pet care.
 
 ## Positioning (Post-Pivot)
 - **Market Category**: AI pet care assistant

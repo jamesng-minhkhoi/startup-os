@@ -19,7 +19,7 @@
 ### Segment 2: Busy Owner
 - **Profile**: Experienced but time-constrained, 1-3 pets, shares care with partner/family
 - **JTBD**: "Give me the answer fast — I don't have time to research"
-- **Key needs**: Quick AI answers, product scanning for safety, automated reminders
+- **Key needs**: Quick AI answers, product scanning for safety, family sync for shared care
 - **AI chat usage**: Moderate frequency, specific questions ("can dogs eat avocado", "my cat is scratching more than usual")
 - **Scanner usage**: High — quick safety checks while shopping
 - **Willingness to pay**: Moderate (values convenience, but needs to see clear time savings)
