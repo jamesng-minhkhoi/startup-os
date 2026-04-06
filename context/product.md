@@ -13,6 +13,13 @@
 - **Our Solution**: AI-first pet care app that knows your pet personally and provides contextual behavior guidance, wellness insights, and product safety scanning.
 - **Key Differentiator**: AI that has full context of each pet (breed, age, health history, allergies, conditions) — not generic advice, but personalized intelligence.
 
+### 5 Core Differentiators (Value Proposition Framework — 2026-04-06)
+1. **AI-native system (not feature-based AI)**: AI is the core of the experience, not an add-on — every interaction is AI-powered
+2. **Scan-first interaction model**: Users scan food, documents → auto insights & actions with minimal effort
+3. **Agentic behavior (action-driven AI)**: AI doesn't just answer — it updates pet data, suggests actions, triggers reminders
+4. **Contextual intelligence**: App understands pet profile, user habits, and current screen/context for relevant suggestions
+5. **Emotional + functional integration**: Combines utility (tracking, health) with emotion (memories, bonding) — not one or the other
+
 ## Core Features (Post-Pivot)
 
 ### AI-First (New — Differentiators)
@@ -46,6 +53,13 @@
 - **Market Category**: AI pet care assistant
 - **Target Customer**: Pet parents who want personalized, intelligent pet care guidance
 - **Positioning Statement**: "For pet parents who want more than generic advice, Petio is the AI pet care assistant that knows your pet personally — providing behavior guidance, wellness insights, and product safety scanning tailored to your pet's unique profile."
+- **Brand Statement** (from Value Prop): PETIO is not just a tool — it acts as a companion that helps users care smarter and connect deeper with their pets
+
+### Design Principles (Value Proposition Framework)
+- **AI-first experience**: AI is embedded across the app to assist, automate, and personalize
+- **Low-effort interaction**: Minimal manual input, fast actions
+- **Context-aware intelligence**: Suggestions based on pet data & behavior
+- **Daily usability**: Designed to be opened and used every day, not occasionally
 
 ## Hypothesized User Segments
 1. **First-Time Owner**: New to pet ownership, high anxiety, lots of questions, needs guidance on everything (feeding, behavior, training, vet schedules). High willingness to trust an AI assistant.
