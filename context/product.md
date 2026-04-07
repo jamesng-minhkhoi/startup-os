@@ -74,9 +74,11 @@
 
 ## Business Model
 - **Revenue Model**: Freemium with subscription upgrade
-- **Pricing**:
-  - Free: 1 pet, 1 family, 5 documents, limited AI chat, 3 memories/day
-  - Plus: $2.92/mo ($34.99/year) — unlimited pets, families, documents, AI chat, product scanner, advanced insights
+- **Pricing (Dual Market)**:
+  - Free: 3 scans/day, 5 AI messages/day, 1 pet profile
+  - Plus (US/Global): $5.99/mo or $47.99/yr — unlimited scans, AI chat, 5 pet profiles, allergen watchlist, family sharing
+  - Plus (Vietnam): 79K VND/mo or 599K VND/yr — same features, localized pricing
+- **Launch**: June 14, 2026 (relaunch — AI-first pivot, first Product Hunt)
 - **Unit Economics**: <!-- To be measured -->
 
 ## Website & Content (petiogo.com)
@@ -131,19 +133,28 @@
 - Food Checker tool (64 foods, bilingual)
 - Blog locale filtering (EN/VI separated)
 
-### Short-Term (This Month)
-1. **Vietnamese App Store listing** — title, description, screenshots in Vietnamese
-2. **VN pricing tier** — 49-99K VND/month for Vietnamese market
-3. **Customer interviews (Mom Test)** — 0 post-pivot validation done
-4. **Product Hunt launch** — backlinks + discovery
-5. **Google Play listing** — app not yet on Play Store
+### Blockers (Before Marketing)
+1. **Google Play listing (Vietnamese)** — 70%+ of VN market is Android
+2. **Vietnamese App Store listing** — title, description, screenshots in Vietnamese
+3. **VN pricing tier (79K VND/mo)** — must be set before any VN marketing
+4. **Analytics events** — track activation, scanner usage, chat, paywall, conversions
+5. **Referral tracking (UTM links)** — can't attribute installs to channels without this
 
-### Medium-Term (This Quarter)
-6. **Vietnamese blog posts #4-10** — VN brand comparisons, label reading, cost of ownership, vaccination schedule
-7. **TikTok scanner demos (Vietnamese)** — scan popular VN pet food brands
-8. **Set up analytics events** — track activation, scanner usage, memory creation
-9. **Measure North Star** — weekly AI chat sessions per active user
-10. **A/B test onboarding** — current survey → paywall needs validation
-11. **5 more EN blog posts** — puppy feeding, vet frequency, pet insurance, cat behavior
-12. **ASO** — keywords, screenshots, description for AI pet care queries
-13. **Zalo OA + Facebook group strategy** — Vietnamese community channels
+### Pre-Launch (Apr–Jun 2026)
+6. **Content engine** — 10 EN blog posts, 10 VI blog posts, TikTok on both markets (4-5/week)
+7. **Community seeding** — Reddit (US), Facebook pet groups (VN), Facebook allergy groups (US)
+8. **Customer interviews (Mom Test)** — 0 post-pivot validation done
+9. **Micro-influencer outreach** — US (free Plus for review), VN (~$150/post KOL)
+10. **Product Hunt ship page** — 2 weeks before launch
+
+### Launch (June 14, 2026)
+11. **Product Hunt + TikTok blitz + all channels** — both markets simultaneously
+12. **Giveaway campaigns (VN)** — comment + share → win Petio Plus
+
+### Post-Launch (This Quarter)
+13. **Measure North Star** — weekly AI chat sessions per active user
+14. **A/B test onboarding** — current survey → paywall needs validation
+15. **ASO** — keywords, screenshots, description for AI pet care queries (EN + VI)
+16. **Zalo OA + Facebook group strategy** — Vietnamese community channels
+17. **Referral program** — "Give 1 month, get 1 month" (activate after proving retention)
+18. **Distribution partnerships (VN)** — pending Vy's decision on rev share model

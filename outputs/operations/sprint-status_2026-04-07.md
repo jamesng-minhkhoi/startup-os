@@ -39,6 +39,20 @@
 
 ---
 
+## Team Coordination & Planning (Apr 7 — later session)
+
+| Task | Detail |
+|------|--------|
+| **DASHBOARD.md** | Created team dashboard — single entry point for all docs, action items by person, pending decisions, milestones, document map |
+| **TEAM-GUIDE.md** | Restructured: added tool setup (James=Code, Vy/Ngoc=Desktop+CoWork), clarified slash commands are CLI-only, added daily workflow process, dashboard vs sprint status roles, file naming conventions |
+| **Growth funnel visualization** | Created Mermaid diagrams: AARRR funnel, channel strategy (US+VN), growth loops, Gantt timeline (Apr→Sep), metrics/targets, ownership map |
+| **Distribution partnership strategy** | Created full playbook + PENDING-REVIEW decision brief for Vy (4 decisions needed) |
+| **Launch date confirmed** | June 14, 2026 — relaunch (AI-first pivot, first Product Hunt) |
+| **Time split confirmed** | 50/50 US vs Vietnam |
+| **Context updates** | Updated product.md (pricing: $5.99 US / 79K VND VN, launch date, roadmap restructured), market.md (VN pricing confirmed), company.md (launch date) |
+
+---
+
 ## What's Next — Prioritized Roadmap
 
 ### Immediate — COMPLETED (Apr 7)

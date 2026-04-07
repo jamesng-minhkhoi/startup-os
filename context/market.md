@@ -54,7 +54,7 @@ No competitor combines: (1) deep-context AI chatbot + (2) personalized product s
 - **Acquisition**: Scanner tool page (/vi/tools/kiem-tra-thuc-an) + Vietnamese blog content (pet food safety angle PawHub doesn't have)
 - **Beachhead**: HCMC — highest pet ownership, spending, and millennial density
 - **Channels**: Facebook groups, Zalo OA, TikTok (scanner demos), Vietnamese SEO
-- **Pricing**: 49-99K VND/month (PetSport charges 399K VND/year for basic QR ID — Petio's AI is worth more)
+- **Pricing**: 79K VND/mo or 599K VND/yr (PetSport charges 399K VND/year for basic QR ID — Petio offers dramatically more value)
 - **Don't build**: Service directory (ops trap), marketplace, GPS tracking, e-commerce
 
 ### Key Insight
