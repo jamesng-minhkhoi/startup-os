@@ -61,16 +61,18 @@
 | 8 | Product Hunt launch | James | 1 day | Backlinks + discovery + early adopter acquisition |
 | 9 | Google Play listing | James | 1 day | Android users can't install yet |
 
-#### Vietnam Market Expansion (NEW)
-| # | Action | Owner | Effort | Why |
-|---|--------|-------|--------|-----|
-| 10 | **Vietnam competitor research** | James | Half day | Must understand VN pet app landscape before entering — who exists, what they charge, where they're weak |
-| 11 | Landing page i18n setup (next-intl + [locale] routing) | James | 2-3 hrs | Infrastructure for /vi — no Vietnamese page exists yet |
-| 12 | Extract all strings → en.json + vi.json | James | 3-4 hrs | ~500+ hardcoded strings need extraction and translation |
-| 13 | Vietnamese SEO metadata (hreflang, OG, sitemap) | James | 1-2 hrs | Google needs to know /vi pages exist for Vietnamese search |
-| 14 | Language switcher in navbar | James | 30 min | Users need to toggle EN/VI |
-| 15 | Vietnamese App Store listing | James | 1 day | Title, description, screenshots in Vietnamese for VN users |
-| 16 | VN pricing tier (49-99K VND/month) | James | Half day | $35/yr doesn't match Vietnamese purchasing power |
+#### Vietnam Market Expansion
+| # | Action | Owner | Effort | Status |
+|---|--------|-------|--------|--------|
+| 10 | ~~Vietnam competitor research~~ | James | Half day | **Done** — PawHub mapped: 447 listings, 36 blog posts, AI Doctor (Beta), 5-person team |
+| 11 | ~~Landing page i18n (next-intl)~~ | James | 2-3 hrs | **Done** — [locale] routing, EN/VI, language switcher |
+| 12 | ~~Extract strings → en.json + vi.json~~ | James | 3-4 hrs | **Done** — all pages translated |
+| 13 | ~~Vietnamese SEO metadata~~ | James | 1-2 hrs | **Done** — hreflang, OG, locale-aware generateMetadata |
+| 14 | ~~Language switcher in navbar~~ | James | 30 min | **Done** — dropdown with ARIA, preserves path |
+| 15 | Vietnamese blog content (first 3 posts) | James | 3 days | Beat PawHub on "chó ăn được gì", "mèo ăn được gì", "dị ứng thức ăn chó" with scanner angle |
+| 16 | Build /vi/tools/kiem-tra-thuc-an (food checker) | James | 1 day | Free web tool — Petio's equivalent of PawHub's directory but harder to copy |
+| 17 | Vietnamese App Store listing | James | 1 day | Title, description, screenshots in Vietnamese |
+| 18 | VN pricing tier (49-99K VND/month) | James | Half day | $35/yr doesn't match Vietnamese purchasing power |
 
 ### Medium-Term (This Quarter)
 
@@ -87,10 +89,11 @@
 #### Vietnam Market
 | # | Action | Owner | Effort | Why |
 |---|--------|-------|--------|-----|
-| 23 | Vietnamese blog content (3-5 posts) | James | 1 week | Vietnamese pet care content = blue ocean, near-zero AI competition |
-| 24 | Zalo OA setup + community seeding | James | 2 days | Vietnamese pet parents live on Zalo and Facebook, not Reddit |
-| 25 | Facebook group strategy (VN pet communities) | James | Ongoing | Seed presence in existing HCMC/Hanoi pet parent groups |
-| 26 | VN-specific ASO | James | 1 day | Vietnamese keywords in App Store / Play Store |
+| 23 | Vietnamese blog posts #4-10 (VN brand comparisons, label reading, cost, vaccination, cheap food) | James | 2 weeks | Fill gaps PawHub doesn't cover — scanner angle on every post |
+| 24 | TikTok scanner demos (Vietnamese) | James | Ongoing | "Boss đang ăn gì?" — scan popular VN pet food brands, short-form video |
+| 25 | Zalo OA setup + community seeding | James | 2 days | Vietnamese pet parents live on Zalo and Facebook |
+| 26 | Facebook group strategy (VN pet communities) | James | Ongoing | Seed presence in HCMC/Hanoi breed-specific and city-specific groups |
+| 27 | VN-specific ASO | James | 1 day | Vietnamese keywords in App Store / Play Store |
 
 ---
 
