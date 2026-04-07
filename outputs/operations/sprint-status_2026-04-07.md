@@ -1,4 +1,4 @@
-# Petio Sprint Status — 2026-04-03
+# Petio Sprint Status — 2026-04-07
 
 ## What Was Completed (Apr 2-3)
 
@@ -41,14 +41,14 @@
 
 ## What's Next — Prioritized Roadmap
 
-### Immediate (This Week)
+### Immediate — COMPLETED (Apr 7)
 
-| # | Action | Owner | Effort | Why |
-|---|--------|-------|--------|-----|
-| 1 | Submit sitemap to Google Search Console | James | 10 min | Unblocks indexing — nothing ranks until Google knows we exist |
-| 2 | Submit to Bing Webmaster Tools | James | 10 min | Powers Copilot + ChatGPT browse — AI search traffic |
-| 3 | Remove reminders tab + routes from mobile app | James | 2-3 hrs | Dead feature adding complexity and confusing new users |
-| 4 | Update App Store screenshots + description | Ngoc + James | 1 day | Currently reflects old "organized" positioning, not AI-first |
+| # | Action | Owner | Status |
+|---|--------|-------|--------|
+| 1 | Submit sitemap to Google Search Console | James | Done — 11 URLs submitted, crawling started |
+| 2 | Submit to Bing Webmaster Tools | James | Done — imported from GSC |
+| 3 | Remove reminders tab + routes from mobile app | James | Done |
+| 4 | Update App Store screenshots + description | Ngoc + James | Done |
 
 ### Short-Term (This Month)
 
