@@ -52,24 +52,45 @@
 
 ### Short-Term (This Month)
 
+#### Global / US Market (continued)
 | # | Action | Owner | Effort | Why |
 |---|--------|-------|--------|-----|
-| 5 | Write "Can My Cat Eat That?" companion post | Vy + James | 2 hrs | Mirrors high-performing dog post for untapped cat keyword volume |
+| 5 | Write "Can My Cat Eat That?" companion post | James | 2 hrs | Mirrors high-performing dog post for untapped cat keyword volume |
 | 6 | Build /tools/food-checker interactive page | James | 1 day | Highly linkable free tool, natural product demo for scanner |
-| 7 | Customer interviews (Mom Test) | Vy | Ongoing | 0 post-pivot validation — all customer insights are hypothesized |
-| 8 | Product Hunt launch | Vy | 1 day | Backlinks + discovery + early adopter acquisition |
+| 7 | Customer interviews (Mom Test) | James | Ongoing | 0 post-pivot validation — all customer insights are hypothesized |
+| 8 | Product Hunt launch | James | 1 day | Backlinks + discovery + early adopter acquisition |
 | 9 | Google Play listing | James | 1 day | Android users can't install yet |
+
+#### Vietnam Market Expansion (NEW)
+| # | Action | Owner | Effort | Why |
+|---|--------|-------|--------|-----|
+| 10 | **Vietnam competitor research** | James | Half day | Must understand VN pet app landscape before entering — who exists, what they charge, where they're weak |
+| 11 | Landing page i18n setup (next-intl + [locale] routing) | James | 2-3 hrs | Infrastructure for /vi — no Vietnamese page exists yet |
+| 12 | Extract all strings → en.json + vi.json | James | 3-4 hrs | ~500+ hardcoded strings need extraction and translation |
+| 13 | Vietnamese SEO metadata (hreflang, OG, sitemap) | James | 1-2 hrs | Google needs to know /vi pages exist for Vietnamese search |
+| 14 | Language switcher in navbar | James | 30 min | Users need to toggle EN/VI |
+| 15 | Vietnamese App Store listing | James | 1 day | Title, description, screenshots in Vietnamese for VN users |
+| 16 | VN pricing tier (49-99K VND/month) | James | Half day | $35/yr doesn't match Vietnamese purchasing power |
 
 ### Medium-Term (This Quarter)
 
+#### Global / US Market
 | # | Action | Owner | Effort | Why |
 |---|--------|-------|--------|-----|
-| 10 | Set up analytics events | James | Half day | Track activation (profile + first chat), scanner usage, memory creation |
-| 11 | Measure North Star | James | 1 hr/week | Weekly AI chat sessions per active user — habit indicator |
-| 12 | A/B test onboarding flow | James + Vy | 1 week | Current survey → paywall needs validation |
-| 13 | 5 more blog posts | Vy + James | 1 week | Puppy feeding, vet frequency, pet insurance, cat behavior, breed guides |
-| 14 | ASO (App Store Optimization) | Ngoc + James | 2 days | Keywords, screenshots, description for AI pet care queries |
-| 15 | Submit to pet app directories | Vy | 1 day | AlternativeTo, G2, pet-specific directories for backlinks |
+| 17 | Set up analytics events | James | Half day | Track activation (profile + first chat), scanner usage, memory creation |
+| 18 | Measure North Star | James | 1 hr/week | Weekly AI chat sessions per active user — habit indicator |
+| 19 | A/B test onboarding flow | James | 1 week | Current survey → paywall needs validation |
+| 20 | 5 more blog posts (EN) | James | 1 week | Puppy feeding, vet frequency, pet insurance, cat behavior, breed guides |
+| 21 | ASO (App Store Optimization) | James | 2 days | Keywords, screenshots, description for AI pet care queries |
+| 22 | Submit to pet app directories | James | 1 day | AlternativeTo, G2, pet-specific directories for backlinks |
+
+#### Vietnam Market
+| # | Action | Owner | Effort | Why |
+|---|--------|-------|--------|-----|
+| 23 | Vietnamese blog content (3-5 posts) | James | 1 week | Vietnamese pet care content = blue ocean, near-zero AI competition |
+| 24 | Zalo OA setup + community seeding | James | 2 days | Vietnamese pet parents live on Zalo and Facebook, not Reddit |
+| 25 | Facebook group strategy (VN pet communities) | James | Ongoing | Seed presence in existing HCMC/Hanoi pet parent groups |
+| 26 | VN-specific ASO | James | 1 day | Vietnamese keywords in App Store / Play Store |
 
 ---
 
@@ -80,6 +101,7 @@
 3. **Blog quality over quantity** — deleted 3 thin posts, rewrote 5 with cited sources + personal voice
 4. **Typography shorthand aliases kept** — h1-h6, body1-3 are intended (not renamed to long-form)
 5. **Lenis smooth scroll kept** — but LensFocusEffect (backdrop-blur overlay) permanently removed
+6. **Vietnam market expansion (Apr 7)** — dual-market strategy: global/US (primary, PMF focus) + Vietnam (home market, organic expansion). Same product, same vision, no feature fragmentation. Vietnam gets: localized landing page, Vietnamese SEO content, local community (Zalo/Facebook), adjusted pricing. App already supports Vietnamese language.
 
 ---
 
@@ -90,4 +112,4 @@
 | 0 customer interviews post-pivot | HIGH — all personas and JTBD are hypothesized | Vy to start Mom Test interviews this month |
 | Google Play not live | MEDIUM — losing Android users | Ship this month |
 | No analytics events | MEDIUM — can't measure activation or retention | Set up this month |
-| App Store screenshots outdated | MEDIUM — first impression doesn't match AI positioning | Update with Ngoc this week |
+| Dual-market split focus | MEDIUM — risk of doing neither market well | Vietnam is GTM/content only, no product fragmentation. James handles landing page i18n, Vy handles VN content/community |
