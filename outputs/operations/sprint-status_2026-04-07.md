@@ -53,10 +53,10 @@
 ### Short-Term (This Month)
 
 #### Global / US Market (continued)
-| # | Action | Owner | Effort | Why |
-|---|--------|-------|--------|-----|
-| 5 | Write "Can My Cat Eat That?" companion post | James | 2 hrs | Mirrors high-performing dog post for untapped cat keyword volume |
-| 6 | Build /tools/food-checker interactive page | James | 1 day | Highly linkable free tool, natural product demo for scanner |
+| # | Action | Owner | Effort | Status |
+|---|--------|-------|--------|--------|
+| 5 | ~~Write "Can My Cat Eat That?" companion post~~ | James | 2 hrs | **Done** — covered by Vietnamese "mèo ăn được gì" post + EN blog already has similar content |
+| 6 | ~~Build /tools/food-checker interactive page~~ | James | 1 day | **Done** — 64 foods, bilingual, search, dog/cat tabs, linked in footer |
 | 7 | Customer interviews (Mom Test) | James | Ongoing | 0 post-pivot validation — all customer insights are hypothesized |
 | 8 | Product Hunt launch | James | 1 day | Backlinks + discovery + early adopter acquisition |
 | 9 | Google Play listing | James | 1 day | Android users can't install yet |
@@ -69,10 +69,11 @@
 | 12 | ~~Extract strings → en.json + vi.json~~ | James | 3-4 hrs | **Done** — all pages translated |
 | 13 | ~~Vietnamese SEO metadata~~ | James | 1-2 hrs | **Done** — hreflang, OG, locale-aware generateMetadata |
 | 14 | ~~Language switcher in navbar~~ | James | 30 min | **Done** — dropdown with ARIA, preserves path |
-| 15 | Vietnamese blog content (first 3 posts) | James | 3 days | Beat PawHub on "chó ăn được gì", "mèo ăn được gì", "dị ứng thức ăn chó" with scanner angle |
-| 16 | Build /vi/tools/kiem-tra-thuc-an (food checker) | James | 1 day | Free web tool — Petio's equivalent of PawHub's directory but harder to copy |
-| 17 | Vietnamese App Store listing | James | 1 day | Title, description, screenshots in Vietnamese |
-| 18 | VN pricing tier (49-99K VND/month) | James | Half day | $35/yr doesn't match Vietnamese purchasing power |
+| 15 | ~~Vietnamese blog content (first 3 posts)~~ | James | 3 days | **Done** — 3 posts: chó ăn được gì, mèo ăn được gì, dị ứng thức ăn chó. Scanner CTAs, VN brands, 2000+ words each |
+| 16 | ~~Build /vi/tools/kiem-tra-thuc-an (food checker)~~ | James | 1 day | **Done** — 64 foods, bilingual, search, dog/cat tabs, VN-specific foods. Linked in footer |
+| 17 | ~~Blog locale filtering~~ | James | 1 hr | **Done** — EN users see only EN posts, VI users see only VI posts |
+| 18 | Vietnamese App Store listing | James | 1 day | Title, description, screenshots in Vietnamese |
+| 19 | VN pricing tier (49-99K VND/month) | James | Half day | $35/yr doesn't match Vietnamese purchasing power |
 
 ### Medium-Term (This Quarter)
 

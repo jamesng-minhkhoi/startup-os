@@ -80,11 +80,14 @@
 - **Unit Economics**: <!-- To be measured -->
 
 ## Website & Content (petiogo.com)
-- **Stack**: Next.js 16, Tailwind v4, Framer Motion, Radix, Lenis smooth scroll
+- **Stack**: Next.js 16, Tailwind v4, Framer Motion, Radix, Lenis smooth scroll, next-intl (i18n)
+- **i18n**: Bilingual EN/VI with [locale] routing, language switcher dropdown, locale-aware metadata/SEO, hreflang alternates
 - **SEO**: Sitemap, robots.txt, JSON-LD (SoftwareApplication, Organization, FAQPage, BlogPosting), Open Graph, canonical URLs, llms.txt for AI search
 - **Analytics**: Google Analytics (G-NX2Y1CWL97), Microsoft Clarity
-- **Blog**: 5 SEO-researched articles with MDX, tag filtering, pagination, TOC, related posts
-- **Content topics**: Dog food safety, food allergies, puppy guides, pet food recalls, AI pet care thought leadership
+- **Blog**: 8 articles total (5 EN, 3 VI) with MDX, locale-aware filtering, tag filtering, pagination, TOC, related posts
+- **English content**: Dog food safety, food allergies, puppy guides, pet food recalls, AI pet care thought leadership
+- **Vietnamese content**: Chó ăn được gì (A-Z), mèo ăn được gì, dị ứng thức ăn chó — all with scanner CTAs, VN food brands, 2000+ words
+- **Food Checker Tool**: /tools/food-checker — 64 foods with dog/cat safety status, search, bilingual, linked in footer. Free web tool for SEO traffic
 
 ## What's Been Completed (as of 2026-04-03)
 
@@ -101,30 +104,46 @@
 - H1 and messaging updated to AI-first positioning
 - Feature cards updated: "Smart Reminders" → "AI Assistant"
 - Blog system: MDX with Callout/QuickAnswer/StatCard components, tag filters, load-more pagination, sticky TOC, related posts, reading progress bar
-- 5 quality blog posts (2000-2500 words each, cited sources, personal voice)
+- 5 quality English blog posts (2000-2500 words each, cited sources, personal voice)
 - SEO: robots.txt, dynamic sitemap, FAQPage schema, Organization schema, BlogPosting schema, OG tags on all pages, llms.txt
 - Google Analytics + Microsoft Clarity installed
 - Scroll performance fixed (removed backdrop-blur glitch)
 - All broken footer links fixed
 
-## What's Next (Prioritized)
+### Landing Page i18n + Vietnam Content (Apr 7)
+- Full i18n with next-intl: [locale] routing, middleware, EN/VI message files
+- All pages translated: Home, Features, Pricing, About, Blog, FAQ, CTA, Navbar, Footer
+- Language switcher dropdown with ARIA accessibility, preserves current path
+- Locale-aware metadata (generateMetadata) on all pages with hreflang alternates
+- Blog locale filtering: EN users see EN posts only, VI users see VI posts only
+- 3 Vietnamese blog posts: chó ăn được gì, mèo ăn được gì, dị ứng thức ăn chó (scanner CTAs, VN brands)
+- Food Checker tool at /tools/food-checker: 64 foods, bilingual, search, dog/cat tabs, VN-specific foods, linked in footer
+- FAQ JSON-LD reads from translations (Vietnamese users get Vietnamese structured data)
 
-### Immediate (This Week)
-1. **Submit sitemap to Google Search Console** — manual step, critical for indexing
-2. **Submit to Bing Webmaster Tools** — powers Copilot + ChatGPT browse
-3. **Remove reminders from mobile app** — code still exists, tab still shows, need to remove the tab + routes
-4. **App Store screenshots/description update** — reflect AI-first positioning, not "organized"
+## What's Next (Prioritized — updated Apr 7)
+
+### Completed (Apr 7)
+- GSC sitemap submitted, Bing Webmaster imported
+- Reminders removed, App Store screenshots updated
+- Vietnam competitor research (PawHub fully mapped)
+- Landing page i18n (EN/VI, all pages, language switcher)
+- 3 Vietnamese blog posts with scanner angle
+- Food Checker tool (64 foods, bilingual)
+- Blog locale filtering (EN/VI separated)
 
 ### Short-Term (This Month)
-5. **Write "Can My Cat Eat That?" blog post** — mirror dog food post for cat audience (untapped keyword volume)
-6. **Build interactive food safety checker** — free tool at /tools/food-checker, highly linkable
-7. **Customer interviews** — 0 post-pivot validation done (customers.md notes this)
-8. **Product Hunt launch** — backlinks + discovery
-9. **Google Play listing** — app not yet on Play Store
+1. **Vietnamese App Store listing** — title, description, screenshots in Vietnamese
+2. **VN pricing tier** — 49-99K VND/month for Vietnamese market
+3. **Customer interviews (Mom Test)** — 0 post-pivot validation done
+4. **Product Hunt launch** — backlinks + discovery
+5. **Google Play listing** — app not yet on Play Store
 
 ### Medium-Term (This Quarter)
-10. **Measure North Star metric** — weekly AI chat sessions per active user
-11. **Set up analytics events** — track activation (profile + first chat), scanner usage, memory creation
-12. **A/B test onboarding** — current survey → paywall flow needs validation
-13. **Content: 5 more blog posts** targeting high-volume queries (puppy feeding, vet visit frequency, pet insurance, cat behavior)
-14. **ASO (App Store Optimization)** — keywords, screenshots, description for AI pet care queries
+6. **Vietnamese blog posts #4-10** — VN brand comparisons, label reading, cost of ownership, vaccination schedule
+7. **TikTok scanner demos (Vietnamese)** — scan popular VN pet food brands
+8. **Set up analytics events** — track activation, scanner usage, memory creation
+9. **Measure North Star** — weekly AI chat sessions per active user
+10. **A/B test onboarding** — current survey → paywall needs validation
+11. **5 more EN blog posts** — puppy feeding, vet frequency, pet insurance, cat behavior
+12. **ASO** — keywords, screenshots, description for AI pet care queries
+13. **Zalo OA + Facebook group strategy** — Vietnamese community channels
