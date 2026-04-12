@@ -79,20 +79,17 @@
 
 | Doc | What it covers |
 |-----|---------------|
-| [Positioning](docs/strategy/positioning_petio_2026-04-02.md) | Differentiation vs. ChatGPT, Google, vets, competitors. Allergy manager as beachhead |
-| [GTM Strategy](docs/strategy/gtm_petio_2026-04-02.md) | Beachhead segment, 4-channel PLG strategy, Vietnam expansion rationale, PawHub battlecard |
-| [Growth Funnel & Strategy Map](docs/strategy/growth-funnel_2026-04-07.md) | Visual AARRR funnel, channel strategy, Gantt timeline, metrics, ownership |
-| [Distribution Partnerships](docs/strategy/distribution-partnership-strategy_2026-04-07.md) | 3-tier rev share (20/25/30%), outreach templates (Vietnamese), partner identification |
-| [PENDING: Partnership Decision](docs/strategy/PENDING-REVIEW_distribution-partnership.md) | Condensed decision brief for Vy — 4 decisions needed before any outreach |
+| [Petio Positioning](docs/strategy/petio-positioning.md) | What Petio is, who it's for (4 segments), pricing, what we're not doing, success metrics |
+| [Competitive Edge](docs/strategy/competitive-edge.md) | Head-to-head vs ChatGPT / Hapu / AskVet / PawHub, where we're vulnerable, our moat |
+| [VN Distribution Partnerships](docs/strategy/vn-distribution-partnerships.md) | Rev share affiliate model (20/25/30%), outreach templates, pending Vy's decision |
 
 #### Marketing — "How do we get users?"
 
 | Doc | What it covers |
 |-----|---------------|
-| [Launch Plan](docs/marketing/launch-plan_petio_2026-04-02.md) | 5-phase launch timeline, Reddit/TikTok/ASO/PH tactics, landing page copy |
-| [Vietnam Growth Playbook](docs/marketing/vietnam-growth-playbook_2026-04-07.md) | 90-day plan for 10K VN users under $1K. Facebook groups, TikTok, KOL, Zalo |
-| [Vietnam Content Strategy](docs/marketing/vietnam-content-strategy_2026-04-07.md) | 10 prioritized Vietnamese blog posts to out-content PawHub |
-| [Growth Loops](docs/marketing/growth-loops_petio_2026-04-12.md) | Scanner viral loop + AI chat usage loop. Share card spec for Ngoc, VN seeding plan for Vy |
+| [US Launch Plan](docs/marketing/us-launch-plan.md) | Channels, content formats, pre-launch checklist, launch week schedule, success metrics |
+| [VN Launch Plan](docs/marketing/vn-launch-plan.md) | Vietnam-specific June 14 launch: Play Store blocker, TikTok, Facebook groups, KOLs, giveaways |
+| [Vietnam Growth Plan](docs/marketing/vietnam-growth-plan.md) | 90-day 10K user plan: phase targets, channel playbook, TikTok formula, blog topics, partner program |
 
 #### Finance
 
@@ -118,6 +115,17 @@
 |-----|---------------|
 | [Vietnam Competitor Research](outputs/strategy/vietnam-competitor-research_2026-04-07.md) | PawHub (5-person, 447 listings, AI Doctor beta), SavePet, 4 others mapped |
 | [Validation Assessment](outputs/strategy/petio-validation-assessment.md) | Risk assessment of Petio concept and pivot decisions |
+| [Strategy (archived)](outputs/strategy/strategy.md) | Original one-page strategy doc — superseded by petio-positioning.md + competitive-edge.md |
+| [Distribution Partnership Strategy (archived)](outputs/strategy/distribution-partnership-strategy_2026-04-07.md) | Full 265-line partnership playbook — superseded by vn-distribution-partnerships.md |
+| [PENDING Partnership Decision (archived)](outputs/strategy/PENDING-REVIEW_distribution-partnership.md) | Original Vy decision brief — superseded by vn-distribution-partnerships.md |
+
+#### Marketing Research
+
+| Doc | What it covers |
+|-----|---------------|
+| [Growth Loops Analysis](outputs/marketing/growth-loops_petio_2026-04-12.md) | Scanner viral loop + AI chat usage loop mechanics, Vy + Ngoc assignments |
+| [Vietnam Growth Playbook (archived)](outputs/marketing/vietnam-growth-playbook_2026-04-07.md) | Full 90-day VN strategy — superseded by vietnam-growth-plan.md |
+| [Marketing Plan (archived)](outputs/marketing/marketing.md) | Original combined marketing doc — superseded by us-launch-plan.md + vn-launch-plan.md |
 
 #### Operations Log
 
@@ -142,10 +150,9 @@
 ## Vietnam Strategy — Reading Order
 
 1. **[Vietnam Competitor Research](outputs/strategy/vietnam-competitor-research_2026-04-07.md)** — Who we're up against (PawHub is the threat)
-2. **[Vietnam Growth Playbook](docs/marketing/vietnam-growth-playbook_2026-04-07.md)** — Market dynamics + 90-day acquisition plan
-3. **[Vietnam Content Strategy](docs/marketing/vietnam-content-strategy_2026-04-07.md)** — Blog content to out-rank PawHub
-4. **[Distribution Partnerships](docs/strategy/distribution-partnership-strategy_2026-04-07.md)** — Rev share model to solve $0 marketing budget
-5. **[PENDING Decision Brief](docs/strategy/PENDING-REVIEW_distribution-partnership.md)** — What Vy needs to decide
+2. **[Vietnam Growth Plan](docs/marketing/vietnam-growth-plan.md)** — Channels, TikTok formula, blog topics, 90-day 10K plan
+3. **[VN Distribution Partnerships](docs/strategy/vn-distribution-partnerships.md)** — Rev share model to solve $0 marketing budget + Vy's decisions
+4. **[VN Launch Plan](docs/marketing/vn-launch-plan.md)** — June 14 Vietnam-specific execution checklist
 
 ---
 
