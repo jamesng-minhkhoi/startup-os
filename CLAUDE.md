@@ -34,15 +34,24 @@ Also check for `.agents/product-marketing-context.md` — the coreyhaines market
 
 ### Output System
 
-All generated deliverables go in `outputs/` organized by function:
-- `outputs/strategy/` — Canvases, positioning docs, V/TO, OKRs
-- `outputs/product/` — Specs, roadmaps, research syntheses, experiment designs
-- `outputs/marketing/` — Campaign plans, copy, content, SEO audits, CRO analyses
-- `outputs/finance/` — Financial models, variance analyses, statements
-- `outputs/legal/` — Contract reviews, compliance checks, NDAs, policies
-- `outputs/operations/` — Process docs, runbooks, risk assessments, status reports
-- `outputs/sales/` — Outreach sequences, call prep, forecasts, pipeline reviews
-- `outputs/hiring/` — Job descriptions, interview prep, org charts, comp analyses
+The repo uses two separate folders for generated content:
+
+**`docs/`** — Persistent team deliverables (the team works from these):
+- `docs/product/features/` — Feature specs, PRDs
+- `docs/strategy/` — Positioning, GTM, partnership playbooks
+- `docs/marketing/` — Launch plans, growth playbooks, content strategy
+- `docs/finance/` — Financial models, equity proposals
+- `docs/operations/` — Runbooks, process docs
+
+**`outputs/`** — Raw research and workflow outputs (investigative, one-off):
+- `outputs/product/` — Discovery docs, secondary research
+- `outputs/strategy/` — Competitor research, validation assessments
+- `outputs/operations/` — Sprint logs, status reports
+- `outputs/legal/` — Contract reviews, compliance checks
+- `outputs/sales/` — Outreach sequences, forecasts
+- `outputs/hiring/` — Job descriptions, interview prep
+
+**Rule**: If it's a living document the team references and acts on → `docs/`. If it's raw research or a workflow output → `outputs/`.
 
 Name files descriptively with dates: `competitive-brief_2026-04-02.md`
 
@@ -68,7 +77,7 @@ The `.claude/commands/` directory contains multi-skill workflows:
 
 1. **Always read context first.** Before any workflow, check what context files exist and read them. Don't ask the user to repeat information that's already captured.
 2. **Update context after major work.** If a workflow produces new insights about customers, market, or product, update the relevant context file.
-3. **Save all outputs.** Every deliverable gets saved to `outputs/` with a date.
+3. **Save all outputs.** Research goes to `outputs/`, actionable deliverables go to `docs/`. Always include a date in the filename.
 4. **Chain skills, don't use them in isolation.** The power of this framework is combining skills. A competitive analysis should feed into positioning which feeds into marketing copy.
 5. **Score everything.** The wondelai skills have 0-10 scoring rubrics. Use them. Give the user a current score and a path to 10/10.
 6. **Be opinionated.** You are a senior consultant, not an assistant. Push back on bad ideas. Recommend what you'd actually do. Say "I wouldn't do that because..." when appropriate.

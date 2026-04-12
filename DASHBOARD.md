@@ -14,7 +14,7 @@
 
 | Decision | Owner | Doc | Urgency |
 |----------|-------|-----|---------|
-| Should we pursue distribution partnerships for Vietnam? | **Vy** | [Decision brief](outputs/strategy/PENDING-REVIEW_distribution-partnership.md) | This week |
+| Should we pursue distribution partnerships for Vietnam? | **Vy** | [Decision brief](docs/strategy/PENDING-REVIEW_distribution-partnership.md) | This week |
 | Revenue share percentages (20/25/30% tiers) | **Vy** | Same as above | This week |
 | Who owns outreach? (James → founders, Vy → pet groups/TikTok) | **Vy + James** | Same as above | This week |
 | Brand guidelines for partner content | **Vy** | Same as above | Before any outreach |
@@ -29,7 +29,7 @@
 |----------|------|--------|-----------|
 | HIGH | Customer interviews (Mom Test) — 0 post-pivot validation | Not started | [Sprint status](outputs/operations/sprint-status_2026-04-07.md) |
 | HIGH | Google Play listing (Android 70%+ of VN market) | Not started | Sprint status #9 |
-| HIGH | Build referral tracking (UTM links) — blocker for partnerships | Not started | [Partnership playbook](outputs/strategy/distribution-partnership-strategy_2026-04-07.md) |
+| HIGH | Build referral tracking (UTM links) — blocker for partnerships | Not started | [Partnership playbook](docs/strategy/distribution-partnership-strategy_2026-04-07.md) |
 | MEDIUM | Vietnamese App Store listing (title, description, screenshots) | Not started | Sprint status #18 |
 | MEDIUM | VN pricing tier in RevenueCat (79K VND/mo) | Not started | Sprint status #19 |
 | MEDIUM | Set up analytics events (activation, scanner, memories) | Not started | Sprint status |
@@ -39,97 +39,113 @@
 
 | Priority | Task | Status | Reference |
 |----------|------|--------|-----------|
-| HIGH | **Read growth loops analysis** — understand scanner viral + AI chat loops before launch | Not started | [Growth Loops](outputs/marketing/growth-loops_petio_2026-04-12.md) |
-| HIGH | **Review distribution partnership proposal** — 4 decisions needed | Waiting | [Decision brief](outputs/strategy/PENDING-REVIEW_distribution-partnership.md) |
-| HIGH | Review Vietnamese outreach templates (tone, slang) | Not started | [Partnership playbook](outputs/strategy/distribution-partnership-strategy_2026-04-07.md) |
+| HIGH | **Read growth loops analysis** — understand scanner viral + AI chat loops before launch | Not started | [Growth Loops](docs/marketing/growth-loops_petio_2026-04-12.md) |
+| HIGH | **Review distribution partnership proposal** — 4 decisions needed | Waiting | [Decision brief](docs/strategy/PENDING-REVIEW_distribution-partnership.md) |
+| HIGH | Review Vietnamese outreach templates (tone, slang) | Not started | [Partnership playbook](docs/strategy/distribution-partnership-strategy_2026-04-07.md) |
 | HIGH | Start Mom Test customer interviews | Not started | Sprint status |
-| MEDIUM | If partnerships approved: DM 5 pet group admins + 5 TikTokers | Blocked (awaiting decision) | [Growth playbook](outputs/marketing/vietnam-growth-playbook_2026-04-07.md) |
+| MEDIUM | If partnerships approved: DM 5 pet group admins + 5 TikTokers | Blocked (awaiting decision) | [Growth playbook](docs/marketing/vietnam-growth-playbook_2026-04-07.md) |
 | MEDIUM | Draft brand dos/don'ts for partner content | Not started | Partnership playbook |
 
 ### Ngoc
 
 | Priority | Task | Status | Reference |
 |----------|------|--------|-----------|
-| HIGH | **Read growth loops analysis + incorporate into Figma** — shareable scanner result card (9:16 + 1:1) and "Share Scan" / "Share Answer" UI are the key deliverables | Not started | [Growth Loops](outputs/marketing/growth-loops_petio_2026-04-12.md) |
+| HIGH | **Read growth loops analysis + incorporate into Figma** — shareable scanner result card (9:16 + 1:1) and "Share Scan" / "Share Answer" UI are the key deliverables | Not started | [Growth Loops](docs/marketing/growth-loops_petio_2026-04-12.md) |
 | MEDIUM | Vietnamese App Store screenshots | Not started | Sprint status #18 |
-| MEDIUM | If partnerships approved: Create partner kit (logo, screenshots, color codes, 3-5 social templates) — ~1 day | Blocked (awaiting decision) | [Partnership playbook](outputs/strategy/distribution-partnership-strategy_2026-04-07.md) |
+| MEDIUM | If partnerships approved: Create partner kit (logo, screenshots, color codes, 3-5 social templates) — ~1 day | Blocked (awaiting decision) | [Partnership playbook](docs/strategy/distribution-partnership-strategy_2026-04-07.md) |
 
 ---
 
 ## Document Map
 
-### Strategy — "Why are we doing this?"
+### `docs/` — Team Deliverables & Decisions
 
-| Doc | What it covers | Read if you need to... |
-|-----|---------------|----------------------|
-| [Positioning](outputs/strategy/positioning_petio_2026-04-02.md) | How Petio is differentiated vs. ChatGPT, Google, vets, competitors. Allergy manager as beachhead | ...understand our messaging angle |
-| [GTM Strategy](outputs/strategy/gtm_petio_2026-04-02.md) | Beachhead segment (allergy dog parent), 4-channel PLG strategy, Vietnam expansion rationale, PawHub battlecard | ...understand our go-to-market plan |
-| [Vietnam Competitor Research](outputs/strategy/vietnam-competitor-research_2026-04-07.md) | PawHub (5-person team, 447 listings, 36 posts, AI Doctor beta), SavePet (solo founder, dying), 4 others mapped | ...understand who we're competing with in VN |
-| [Validation Assessment](outputs/strategy/petio-validation-assessment.md) | Risk assessment of the Petio concept and pivot decisions | ...understand what's validated vs. hypothesized |
-| [Growth Funnel & Strategy Map](outputs/strategy/growth-funnel_2026-04-07.md) | Visual diagrams: AARRR funnel, channel strategy, growth loops, Gantt timeline, metrics, ownership | ...see the full strategy visually |
+#### Product — "What are we building?"
 
-### Marketing & Growth — "How do we get users?"
+| Feature | Spec | Who should read |
+|---------|------|----------------|
+| Onboarding & Auth | [01-onboarding-auth.md](docs/product/features/01-onboarding-auth.md) | Everyone |
+| Pet Profiles | [02-pet-profiles.md](docs/product/features/02-pet-profiles.md) | Everyone — ⚠️ missing allergen fields |
+| AI Chat | [03-ai-chat.md](docs/product/features/03-ai-chat.md) | Everyone |
+| Product Scanner | [04-product-scanner.md](docs/product/features/04-product-scanner.md) | Everyone — ⚠️ dead buttons, accuracy gap |
+| Memories | [05-memories.md](docs/product/features/05-memories.md) | Everyone |
+| Health & Statistics | [06-health-statistics.md](docs/product/features/06-health-statistics.md) | James + Ngoc |
+| Paywall & Subscriptions | [07-paywall-subscriptions.md](docs/product/features/07-paywall-subscriptions.md) | James — ⚠️ pricing needs update in RevenueCat |
+| Scanner Share Card *(planned)* | [08-scanner-share-card.md](docs/product/features/08-scanner-share-card.md) | Ngoc (design) + James (build) |
+| Family Sync | [09-family-sync.md](docs/product/features/09-family-sync.md) | Everyone |
+| Documents | [10-documents.md](docs/product/features/10-documents.md) | Everyone |
 
-| Doc | What it covers | Read if you need to... |
-|-----|---------------|----------------------|
-| [Launch Plan](outputs/marketing/launch-plan_petio_2026-04-02.md) | 5-phase launch timeline, campaign plan, Reddit/TikTok/ASO/PH tactics, landing page copy | ...understand the global launch plan |
-| [Vietnam Growth Playbook](outputs/marketing/vietnam-growth-playbook_2026-04-07.md) | 90-day plan for 10K VN users under $1K. Facebook groups, TikTok formula, giveaways, KOL outreach, Zalo | ...execute Vietnam growth (start here for VN) |
-| [Vietnam Content Strategy](outputs/marketing/vietnam-content-strategy_2026-04-07.md) | 10 prioritized Vietnamese blog posts to out-content PawHub. Scanner CTA on every post | ...write or plan Vietnamese content |
-| [Distribution Partnerships](outputs/strategy/distribution-partnership-strategy_2026-04-07.md) | Full playbook: 3-tier rev share (20/25/30%), outreach templates (Vietnamese), partner identification | ...understand the partnership model in detail |
-| [PENDING: Partnership Decision](outputs/strategy/PENDING-REVIEW_distribution-partnership.md) | Condensed decision brief for Vy. 4 decisions needed before any outreach | ...make the partnership decision (Vy) |
-| [Growth Loops](outputs/marketing/growth-loops_petio_2026-04-12.md) | Scanner viral loop + AI chat usage loop. Shareable card spec for Ngoc, VN community seeding plan for Vy | ...design the scanner share card (Ngoc) or plan VN seeding (Vy) |
+#### Strategy — "Why are we doing this?"
 
-### Product & Research — "What are we building?"
+| Doc | What it covers |
+|-----|---------------|
+| [Positioning](docs/strategy/positioning_petio_2026-04-02.md) | Differentiation vs. ChatGPT, Google, vets, competitors. Allergy manager as beachhead |
+| [GTM Strategy](docs/strategy/gtm_petio_2026-04-02.md) | Beachhead segment, 4-channel PLG strategy, Vietnam expansion rationale, PawHub battlecard |
+| [Growth Funnel & Strategy Map](docs/strategy/growth-funnel_2026-04-07.md) | Visual AARRR funnel, channel strategy, Gantt timeline, metrics, ownership |
+| [Distribution Partnerships](docs/strategy/distribution-partnership-strategy_2026-04-07.md) | 3-tier rev share (20/25/30%), outreach templates (Vietnamese), partner identification |
+| [PENDING: Partnership Decision](docs/strategy/PENDING-REVIEW_distribution-partnership.md) | Condensed decision brief for Vy — 4 decisions needed before any outreach |
 
-**Feature Specs** (one doc per feature — start here):
+#### Marketing — "How do we get users?"
 
-| Feature | Doc | Who should read |
-|---------|-----|----------------|
-| Onboarding & Auth | [01-onboarding-auth.md](outputs/product/features/01-onboarding-auth.md) | Everyone |
-| Pet Profiles | [02-pet-profiles.md](outputs/product/features/02-pet-profiles.md) | Everyone — ⚠️ missing allergen fields |
-| AI Chat | [03-ai-chat.md](outputs/product/features/03-ai-chat.md) | Everyone |
-| Product Scanner | [04-product-scanner.md](outputs/product/features/04-product-scanner.md) | Everyone — ⚠️ dead buttons, accuracy gap |
-| Memories | [05-memories.md](outputs/product/features/05-memories.md) | Everyone |
-| Health & Statistics | [06-health-statistics.md](outputs/product/features/06-health-statistics.md) | James + Ngoc |
-| Paywall & Subscriptions | [07-paywall-subscriptions.md](outputs/product/features/07-paywall-subscriptions.md) | James — ⚠️ pricing needs update in RevenueCat |
-| Scanner Share Card *(planned)* | [08-scanner-share-card.md](outputs/product/features/08-scanner-share-card.md) | Ngoc (design) + James (build) |
-| Family Sync | [09-family-sync.md](outputs/product/features/09-family-sync.md) | Everyone |
-| Documents | [10-documents.md](outputs/product/features/10-documents.md) | Everyone |
+| Doc | What it covers |
+|-----|---------------|
+| [Launch Plan](docs/marketing/launch-plan_petio_2026-04-02.md) | 5-phase launch timeline, Reddit/TikTok/ASO/PH tactics, landing page copy |
+| [Vietnam Growth Playbook](docs/marketing/vietnam-growth-playbook_2026-04-07.md) | 90-day plan for 10K VN users under $1K. Facebook groups, TikTok, KOL, Zalo |
+| [Vietnam Content Strategy](docs/marketing/vietnam-content-strategy_2026-04-07.md) | 10 prioritized Vietnamese blog posts to out-content PawHub |
+| [Growth Loops](docs/marketing/growth-loops_petio_2026-04-12.md) | Scanner viral loop + AI chat usage loop. Share card spec for Ngoc, VN seeding plan for Vy |
 
-**Discovery & Research:**
+#### Finance
 
-| Doc | What it covers | Read if you need to... |
-|-----|---------------|----------------------|
-| [Discovery (AI Pivot)](outputs/product/discovery_petio_ai-pivot_2026-04-02.md) | Discovery cycle after AI-first pivot | ...understand why we pivoted to AI-first |
-| [Secondary Research](outputs/product/secondary_research_petio_2026-04-02.md) | Market research synthesis | ...see our research sources |
+| Doc | What it covers |
+|-----|---------------|
+| [Equity Restructuring Proposal](docs/finance/equity-restructuring-proposal_2026-04-09.md) | Draft equity split proposal for team discussion |
 
-### Operations — "What's happening right now?"
+---
 
-| Doc | What it covers | Read if you need to... |
-|-----|---------------|----------------------|
-| [Sprint Status](outputs/operations/sprint-status_2026-04-07.md) | Full sprint completion report (Apr 2-7), reprioritized roadmap with 27 tasks, blockers, key decisions | ...see what's done and what's next |
+### `outputs/` — Research & Workflow Outputs
 
-### Context Files — "What do we know?"
+#### Product Research
+
+| Doc | What it covers |
+|-----|---------------|
+| [Discovery (Original)](outputs/product/discovery_petio_2026-04-02.md) | Original product discovery cycle |
+| [Discovery (AI Pivot)](outputs/product/discovery_petio_ai-pivot_2026-04-02.md) | Discovery cycle after AI-first pivot — why we pivoted |
+| [Secondary Research](outputs/product/secondary_research_petio_2026-04-02.md) | Market research synthesis and sources |
+
+#### Strategy Research
+
+| Doc | What it covers |
+|-----|---------------|
+| [Vietnam Competitor Research](outputs/strategy/vietnam-competitor-research_2026-04-07.md) | PawHub (5-person, 447 listings, AI Doctor beta), SavePet, 4 others mapped |
+| [Validation Assessment](outputs/strategy/petio-validation-assessment.md) | Risk assessment of Petio concept and pivot decisions |
+
+#### Operations Log
+
+| Doc | What it covers |
+|-----|---------------|
+| [Sprint Status (Apr 2-7)](outputs/operations/sprint-status_2026-04-07.md) | Sprint completion report, 27-task roadmap, blockers, decisions |
+
+---
+
+### `context/` — Business Intelligence (What We Know)
 
 | File | Purpose | Last updated |
 |------|---------|-------------|
-| [context/company.md](context/company.md) | Vision, mission, team, equity, finances | Apr 7 |
-| [context/product.md](context/product.md) | Features, tech stack, roadmap, removed features | Apr 7 |
-| [context/market.md](context/market.md) | TAM/SAM/SOM, competitors (US + VN), trends | Apr 7 |
-| [context/customers.md](context/customers.md) | 4 segments, JTBD, growth roles, messaging | Apr 7 |
-| [context/metrics.md](context/metrics.md) | North Star, AARRR targets, OKRs, guardrails | Apr 7 |
+| [company.md](context/company.md) | Vision, mission, team, equity, finances | Apr 7 |
+| [product.md](context/product.md) | Features, tech stack, roadmap, removed features | Apr 7 |
+| [market.md](context/market.md) | TAM/SAM/SOM, competitors (US + VN), trends | Apr 7 |
+| [customers.md](context/customers.md) | 4 segments, JTBD, growth roles, messaging | Apr 7 |
+| [metrics.md](context/metrics.md) | North Star, AARRR targets, OKRs, guardrails | Apr 7 |
 
 ---
 
 ## Vietnam Strategy — Reading Order
 
-If you're catching up on the Vietnam expansion, read in this order:
-
 1. **[Vietnam Competitor Research](outputs/strategy/vietnam-competitor-research_2026-04-07.md)** — Who we're up against (PawHub is the threat)
-2. **[Vietnam Growth Playbook](outputs/marketing/vietnam-growth-playbook_2026-04-07.md)** — Market dynamics + 90-day acquisition plan
-3. **[Vietnam Content Strategy](outputs/marketing/vietnam-content-strategy_2026-04-07.md)** — Blog content to out-rank PawHub
-4. **[Distribution Partnerships](outputs/strategy/distribution-partnership-strategy_2026-04-07.md)** — Rev share model to solve $0 marketing budget
-5. **[PENDING Decision Brief](outputs/strategy/PENDING-REVIEW_distribution-partnership.md)** — What Vy needs to decide
+2. **[Vietnam Growth Playbook](docs/marketing/vietnam-growth-playbook_2026-04-07.md)** — Market dynamics + 90-day acquisition plan
+3. **[Vietnam Content Strategy](docs/marketing/vietnam-content-strategy_2026-04-07.md)** — Blog content to out-rank PawHub
+4. **[Distribution Partnerships](docs/strategy/distribution-partnership-strategy_2026-04-07.md)** — Rev share model to solve $0 marketing budget
+5. **[PENDING Decision Brief](docs/strategy/PENDING-REVIEW_distribution-partnership.md)** — What Vy needs to decide
 
 ---
 
@@ -161,8 +177,8 @@ If you're catching up on the Vietnam expansion, read in this order:
 
 ## How to Use This Dashboard
 
-- **This is the live action board** — what each person needs to do NOW
-- **Sprint status** (`outputs/operations/`) is the historical record — what was completed, decisions made
-- **Click through** to the specific doc for details
-- **Update context/** files when you learn something new (customer interview, competitor move, metric update)
+- **`docs/`** — persistent deliverables the team works from (specs, strategies, plans)
+- **`outputs/`** — raw research and workflow outputs (discovery, competitor research, sprint logs)
+- **`context/`** — shared business intelligence that Claude reads automatically
+- **Update `context/`** when you learn something new (customer interview, competitor move, metric update)
 - **Ask Claude** to update this dashboard after major work: "update DASHBOARD.md with what we just did"
