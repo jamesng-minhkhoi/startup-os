@@ -1,6 +1,6 @@
 # Petio Team Dashboard
 
-**Last updated:** 2026-04-07 | **Sprint:** Apr 7-13 | **Stage:** Pre-launch (iOS live, Play Store pending) | **Launch:** June 14, 2026
+**Last updated:** 2026-04-12 | **Sprint:** Apr 7-13 | **Stage:** Pre-launch (iOS live, Play Store pending) | **Launch:** June 14, 2026
 
 ---
 
@@ -39,6 +39,7 @@
 
 | Priority | Task | Status | Reference |
 |----------|------|--------|-----------|
+| HIGH | **Read growth loops analysis** — understand scanner viral + AI chat loops before launch | Not started | [Growth Loops](outputs/marketing/growth-loops_petio_2026-04-12.md) |
 | HIGH | **Review distribution partnership proposal** — 4 decisions needed | Waiting | [Decision brief](outputs/strategy/PENDING-REVIEW_distribution-partnership.md) |
 | HIGH | Review Vietnamese outreach templates (tone, slang) | Not started | [Partnership playbook](outputs/strategy/distribution-partnership-strategy_2026-04-07.md) |
 | HIGH | Start Mom Test customer interviews | Not started | Sprint status |
@@ -49,6 +50,7 @@
 
 | Priority | Task | Status | Reference |
 |----------|------|--------|-----------|
+| HIGH | **Read growth loops analysis + incorporate into Figma** — shareable scanner result card (9:16 + 1:1) and "Share Scan" / "Share Answer" UI are the key deliverables | Not started | [Growth Loops](outputs/marketing/growth-loops_petio_2026-04-12.md) |
 | MEDIUM | Vietnamese App Store screenshots | Not started | Sprint status #18 |
 | MEDIUM | If partnerships approved: Create partner kit (logo, screenshots, color codes, 3-5 social templates) — ~1 day | Blocked (awaiting decision) | [Partnership playbook](outputs/strategy/distribution-partnership-strategy_2026-04-07.md) |
 
@@ -75,6 +77,7 @@
 | [Vietnam Content Strategy](outputs/marketing/vietnam-content-strategy_2026-04-07.md) | 10 prioritized Vietnamese blog posts to out-content PawHub. Scanner CTA on every post | ...write or plan Vietnamese content |
 | [Distribution Partnerships](outputs/strategy/distribution-partnership-strategy_2026-04-07.md) | Full playbook: 3-tier rev share (20/25/30%), outreach templates (Vietnamese), partner identification | ...understand the partnership model in detail |
 | [PENDING: Partnership Decision](outputs/strategy/PENDING-REVIEW_distribution-partnership.md) | Condensed decision brief for Vy. 4 decisions needed before any outreach | ...make the partnership decision (Vy) |
+| [Growth Loops](outputs/marketing/growth-loops_petio_2026-04-12.md) | Scanner viral loop + AI chat usage loop. Shareable card spec for Ngoc, VN community seeding plan for Vy | ...design the scanner share card (Ngoc) or plan VN seeding (Vy) |
 
 ### Product & Research — "What are we building?"
 
