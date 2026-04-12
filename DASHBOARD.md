@@ -81,9 +81,25 @@
 
 ### Product & Research — "What are we building?"
 
+**Feature Specs** (one doc per feature — start here):
+
+| Feature | Doc | Who should read |
+|---------|-----|----------------|
+| Onboarding & Auth | [01-onboarding-auth.md](outputs/product/features/01-onboarding-auth.md) | Everyone |
+| Pet Profiles | [02-pet-profiles.md](outputs/product/features/02-pet-profiles.md) | Everyone — ⚠️ missing allergen fields |
+| AI Chat | [03-ai-chat.md](outputs/product/features/03-ai-chat.md) | Everyone |
+| Product Scanner | [04-product-scanner.md](outputs/product/features/04-product-scanner.md) | Everyone — ⚠️ dead buttons, accuracy gap |
+| Memories | [05-memories.md](outputs/product/features/05-memories.md) | Everyone |
+| Health & Statistics | [06-health-statistics.md](outputs/product/features/06-health-statistics.md) | James + Ngoc |
+| Paywall & Subscriptions | [07-paywall-subscriptions.md](outputs/product/features/07-paywall-subscriptions.md) | James — ⚠️ pricing needs update in RevenueCat |
+| Scanner Share Card *(planned)* | [08-scanner-share-card.md](outputs/product/features/08-scanner-share-card.md) | Ngoc (design) + James (build) |
+| Family Sync | [09-family-sync.md](outputs/product/features/09-family-sync.md) | Everyone |
+| Documents | [10-documents.md](outputs/product/features/10-documents.md) | Everyone |
+
+**Discovery & Research:**
+
 | Doc | What it covers | Read if you need to... |
 |-----|---------------|----------------------|
-| [Discovery (Original)](outputs/product/discovery_petio_2026-04-02.md) | Original product discovery cycle | ...understand early product thinking |
 | [Discovery (AI Pivot)](outputs/product/discovery_petio_ai-pivot_2026-04-02.md) | Discovery cycle after AI-first pivot | ...understand why we pivoted to AI-first |
 | [Secondary Research](outputs/product/secondary_research_petio_2026-04-02.md) | Market research synthesis | ...see our research sources |
 
