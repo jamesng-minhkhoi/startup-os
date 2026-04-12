@@ -25,7 +25,7 @@
 | **Facebook allergy groups** | Dog allergy/sensitivity groups — same trust-first approach as Reddit | James | 15 min/day |
 | **SEO blog** | 10 posts targeting "can my dog eat X", "dog food scanner", "dog food allergy" — scanner CTA on every post | James | 2/week pre-launch |
 | **ASO** | App name: "Petio — Dog Food Scanner & Pet AI". Lead screenshots with scanner. | James | One-time + monthly tune |
-| **Micro-influencers** | Free Plus for 60-day review — pet TikTokers with 10K–100K US followers | Vy | 5–10 creators, confirmed before launch |
+| **Micro-influencers** | Free Plus account for 60-day review — pet TikTokers with 10K–100K US followers. No cash. If they want ongoing, offer 25% rev share. | Vy | 5–10 creators, confirmed before launch |
 | **Product Hunt** | Full launch June 14 — pre-build hunter network, collect upvotes day-of | James + Ngoc | One-time |
 
 ---
@@ -87,9 +87,39 @@
 | Metric | Target | Below this → fix before scaling |
 |--------|--------|---------------------------------|
 | Total installs | 2,000+ | — |
+| **Paying subscribers** | **100+** (5% of installs) | <50 = paywall or value problem |
+| **US MRR contribution** | **$599+** | Combined with VN target: $1K total gross MRR |
+| **Annual vs monthly mix** | **>20% annual** | Annual = $47.99 upfront vs $5.99/mo — push this hard |
 | Day-7 retention | >25% | <15% = product problem, stop marketing |
-| Free → Plus conversion | >5% | <2% = paywall or value problem |
+| Free → Plus conversion | >5% | <2% = paywall problem — fix before scaling spend |
 | AI chat sessions / active user / week | 3+ | <2 = core North Star, fix immediately |
+
+**Combined target (US + VN)**: 100 US paying + 190 VN paying = ~$1,197 gross MRR. This is the $1K MRR milestone.
+
+## Annual Subscription Strategy
+
+Annual subscriptions are the fastest path to cash. 50 annual US subscribers = **$2,400 upfront** in one month vs $300/mo from 50 monthly subscribers.
+
+**Paywall default must be annual**, not monthly. Monthly should look like the expensive option:
+- Annual: $47.99/yr (~$4.00/mo) ← show this prominently
+- Monthly: $5.99/mo ← show as the "flexible but pricier" option
+- Add "Save 33%" badge on annual
+
+This is a P1 fix before launch. Currently not confirmed in RevenueCat setup.
+
+---
+
+## If TikTok Underperforms (US Fallback)
+
+TikTok is the primary US channel but results aren't guaranteed. If videos aren't hitting 10K+ views after 2 weeks, don't keep doing the same thing — shift:
+
+| Fallback | What to do | Why |
+|----------|-----------|-----|
+| **Double Reddit/Facebook** | Increase from 30 min/day to 2 hrs/day. Go deeper in r/dogallergies and r/rawpetfood — answer every question, build credibility, soft-introduce Petio. | Allergic dog owner community is highly engaged, text-based, and underserved by video content. |
+| **ASO push** | Optimise App Store for "dog food scanner" — if organic TikTok fails, search is the next best free channel. | At launch, ASO drives 40–60% of organic mobile installs for utility apps. |
+| **Scanner share loop** | Focus energy on getting the share card into users' hands — every share reaches pet-owner friends organically. This compounds without any channel investment. | Scanner loop is product-native and doesn't depend on TikTok or social following. |
+
+The $1K MRR target doesn't require TikTok virality — it requires 100 paying US users. Reddit + ASO + scanner shares can get there, just more slowly.
 
 ---
 

@@ -14,7 +14,7 @@
 
 | Decision | Owner | Doc | Urgency |
 |----------|-------|-----|---------|
-| Should we pursue distribution partnerships for Vietnam? | **Vy** | [Decision brief](docs/strategy/PENDING-REVIEW_distribution-partnership.md) | This week |
+| Should we pursue distribution partnerships for Vietnam? | **Vy** | [VN Distribution Partnerships](docs/strategy/vn-distribution-partnerships.md) | This week |
 | Revenue share percentages (20/25/30% tiers) | **Vy** | Same as above | This week |
 | Who owns outreach? (James → founders, Vy → pet groups/TikTok) | **Vy + James** | Same as above | This week |
 | Brand guidelines for partner content | **Vy** | Same as above | Before any outreach |
@@ -29,30 +29,32 @@
 |----------|------|--------|-----------|
 | HIGH | Customer interviews (Mom Test) — 0 post-pivot validation | Not started | [Sprint status](outputs/operations/sprint-status_2026-04-07.md) |
 | HIGH | Google Play listing (Android 70%+ of VN market) | Not started | Sprint status #9 |
-| HIGH | Build referral tracking (UTM links) — blocker for partnerships | Not started | [Partnership playbook](docs/strategy/distribution-partnership-strategy_2026-04-07.md) |
+| HIGH | Fix RevenueCat pricing: $5.99/mo + $47.99/yr (US), 79K/599K VND (VN) | Not started | [Paywall spec](docs/product/features/07-paywall-subscriptions.md) |
+| HIGH | Set annual as default on paywall (add "Save 33%" badge) — 8x better cash flow | Not started | [Paywall spec](docs/product/features/07-paywall-subscriptions.md) |
+| HIGH | Build referral tracking (UTM links) — blocker for partnerships | Not started | [Partnership doc](docs/strategy/vn-distribution-partnerships.md) |
 | MEDIUM | Vietnamese App Store listing (title, description, screenshots) | Not started | Sprint status #18 |
-| MEDIUM | VN pricing tier in RevenueCat (79K VND/mo) | Not started | Sprint status #19 |
-| MEDIUM | Set up analytics events (activation, scanner, memories) | Not started | Sprint status |
+| MEDIUM | Set up analytics events (activation, scanner, chat, paywall, conversion) | Not started | Sprint status |
 | LOW | Product Hunt launch | Not started | Sprint status #8 |
 
 ### Vy
 
 | Priority | Task | Status | Reference |
 |----------|------|--------|-----------|
-| HIGH | **Read growth loops analysis** — understand scanner viral + AI chat loops before launch | Not started | [Growth Loops](docs/marketing/growth-loops_petio_2026-04-12.md) |
-| HIGH | **Review distribution partnership proposal** — 4 decisions needed | Waiting | [Decision brief](docs/strategy/PENDING-REVIEW_distribution-partnership.md) |
-| HIGH | Review Vietnamese outreach templates (tone, slang) | Not started | [Partnership playbook](docs/strategy/distribution-partnership-strategy_2026-04-07.md) |
-| HIGH | Start Mom Test customer interviews | Not started | Sprint status |
-| MEDIUM | If partnerships approved: DM 5 pet group admins + 5 TikTokers | Blocked (awaiting decision) | [Growth playbook](docs/marketing/vietnam-growth-playbook_2026-04-07.md) |
-| MEDIUM | Draft brand dos/don'ts for partner content | Not started | Partnership playbook |
+| HIGH | **Join all 10 VN Facebook pet groups this week** — community trust takes 3–4 weeks minimum before you can mention Petio. Missing this window = cold intro on launch day. | Not started | [VN Launch Plan](docs/marketing/vn-launch-plan.md) |
+| HIGH | **Read growth loops analysis** — understand scanner viral + AI chat loops before launch | Not started | [Growth Loops](outputs/marketing/growth-loops_petio_2026-04-12.md) |
+| HIGH | **Review distribution partnership proposal** — 4 decisions needed | Waiting | [VN Distribution Partnerships](docs/strategy/vn-distribution-partnerships.md) |
+| HIGH | Review Vietnamese outreach templates (tone, slang) | Not started | [VN Distribution Partnerships](docs/strategy/vn-distribution-partnerships.md) |
+| HIGH | Start Mom Test customer interviews | Not started | [Sprint status](outputs/operations/sprint-status_2026-04-07.md) |
+| MEDIUM | Reach out to 5 VN pet TikTokers — offer free Plus + 25% rev share (no cash) | Blocked (awaiting partnership decision) | [VN Launch Plan](docs/marketing/vn-launch-plan.md) |
+| MEDIUM | Draft brand dos/don'ts for partner content | Not started | [VN Distribution Partnerships](docs/strategy/vn-distribution-partnerships.md) |
 
 ### Ngoc
 
 | Priority | Task | Status | Reference |
 |----------|------|--------|-----------|
-| HIGH | **Read growth loops analysis + incorporate into Figma** — shareable scanner result card (9:16 + 1:1) and "Share Scan" / "Share Answer" UI are the key deliverables | Not started | [Growth Loops](docs/marketing/growth-loops_petio_2026-04-12.md) |
-| MEDIUM | Vietnamese App Store screenshots | Not started | Sprint status #18 |
-| MEDIUM | If partnerships approved: Create partner kit (logo, screenshots, color codes, 3-5 social templates) — ~1 day | Blocked (awaiting decision) | [Partnership playbook](docs/strategy/distribution-partnership-strategy_2026-04-07.md) |
+| HIGH | **Read growth loops analysis + incorporate into Figma** — shareable scanner result card (9:16 + 1:1) and "Share Scan" / "Share Answer" UI are the key deliverables | Not started | [Growth Loops](outputs/marketing/growth-loops_petio_2026-04-12.md) |
+| MEDIUM | Vietnamese App Store screenshots | Not started | [VN Launch Plan](docs/marketing/vn-launch-plan.md) |
+| MEDIUM | If partnerships approved: Create partner kit (logo, screenshots, color codes, 3-5 Canva templates) — ~1 day | Blocked (awaiting decision) | [VN Distribution Partnerships](docs/strategy/vn-distribution-partnerships.md) |
 
 ---
 
@@ -158,16 +160,19 @@
 
 ## Key Milestones
 
-| Date | Milestone | Status |
-|------|-----------|--------|
-| Apr 2-7 | Mobile refactoring, landing page AI-first, SEO, blog, analytics | Done |
-| Apr 7 | Landing page i18n (EN/VI), 3 VN blog posts, food checker tool | Done |
-| Apr 7 | Vietnam competitor research + growth strategy | Done |
-| Apr 8-13 | Vy reviews partnership proposal | **This week** |
-| Apr 8-20 | Fix blockers: Play Store, VN App Store listing, analytics, pricing | Pending |
-| Apr-May | Content engine: blog + TikTok + community seeding (both markets) | Pending |
-| **Jun 14** | **Relaunch: Product Hunt + TikTok blitz + all channels** | **Target** |
-| Sep 14 | 90-day VN check: 10K user target | Pending |
+| Date | Milestone | Target | Status |
+|------|-----------|--------|--------|
+| Apr 2-7 | Mobile refactoring, landing page AI-first, SEO, blog, analytics | — | Done |
+| Apr 7 | Landing page i18n (EN/VI), 3 VN blog posts, food checker tool | — | Done |
+| Apr 7 | Vietnam competitor research + growth strategy | — | Done |
+| Apr 8-13 | Vy reviews partnership proposal | — | **This week** |
+| Apr 8-20 | Fix blockers: Play Store, VN App Store listing, analytics, pricing | — | Pending |
+| Apr–May | Content engine: blog + TikTok + community seeding (both markets) | 500 VN users | Pending |
+| **Jun 14** | **Relaunch: Product Hunt + TikTok blitz + all channels** | — | **Target** |
+| Jul 14 | Launch +30 check | 100 US paying + 25 VN paying → **$678 MRR** | Pending |
+| **Aug–Sep** | **$1K gross MRR milestone** | **~290 paying users combined** | **Target** |
+| Sep 14 | 90-day VN check | 10K VN users → 500 paying → **$1,580 VN MRR** | Pending |
+| Q4 2026 | Team salaries unlocked | $3,000+ MRR → ~434 US or 822 VN paying users | Pending |
 
 ---
 
@@ -176,7 +181,10 @@
 | Blocker | Impact | Owner | Mitigation |
 |---------|--------|-------|-----------|
 | 0 customer interviews post-pivot | HIGH — all personas are hypothesized | James + Vy | Start Mom Test this month |
-| Google Play not live | HIGH — 70%+ of VN market is Android | James | Ship this month |
+| Google Play not live | HIGH — 70%+ of VN market is Android, Phases 1–2 VN targets are iOS-only until fixed | James | Ship this month |
+| RevenueCat pricing wrong ($3.99/$34.99 instead of $5.99/$47.99) | HIGH — every conversion earns 33% less MRR until fixed; VN pricing not set up at all | James | Fix before any marketing |
+| Annual not default on paywall | HIGH — defaulting to monthly means 8x less upfront cash per subscriber | James | Fix with RevenueCat update |
+| Vy not yet in VN Facebook groups | HIGH — 3–4 week trust-building window before launch | Vy | Join all 10 groups this week |
 | No analytics events | MEDIUM — can't measure activation/retention | James | Set up this month |
 | Partnership decision pending | MEDIUM — blocks VN distribution outreach | Vy | Review this week |
 

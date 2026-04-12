@@ -5,13 +5,17 @@
 
 ## The Target
 
-| Phase | Period | Users | Primary Driver |
-|-------|--------|-------|----------------|
-| Phase 1 | Apr–May | 500 | SEO compounding + food checker tool + Facebook group seeding |
-| Phase 2 | May–Jun | 2,500 | TikTok organic + blog + ASO |
-| Phase 3 | Jun–Sep | 10,000 | TikTok scaling + referral snowball + distribution partners |
+| Phase | Period | Total Users | Paying Users (5%) | VN MRR | Primary Driver | Notes |
+|-------|--------|-------------|-------------------|---------|----------------|-------|
+| Phase 1 | Apr–May | ~150 | ~7 | ~$22 | SEO + food checker + Facebook seeding | iOS only — Play Store not yet live |
+| Phase 2 | May–Jun | ~800 | ~40 | ~$126 | TikTok organic + blog + ASO | Play Store goes live mid-phase |
+| Phase 3 | Jun–Sep | 10,000 | 500 | **~$1,580** | TikTok scaling + referral + distribution partners | Full Android + iOS market |
 
-**The one variable**: TikTok. If 2–3 scanner videos hit 100K+ views in VN pet communities → 10K is reachable. If TikTok underperforms → fall back to paying 2–3 large pet group admins for pinned posts.
+> ⚠️ Phases 1–2 are iOS-only (30% of VN market). Play Store must go live before June 14 to unlock Phase 3 potential. Original 500/2,500 targets assumed Android access — not realistic until Play Store is live.
+
+**VN alone hits $1K gross MRR at ~6,300 users** (316 paying × $3.16). The 10K target gets to $1,580 MRR from Vietnam before factoring in US revenue.
+
+**The one variable**: TikTok. If 2–3 scanner videos hit 100K+ views in VN pet communities → 10K is reachable. If TikTok underperforms → fall back to deeper Facebook group seeding — daily scan results as community content + offer group admins the 30% rev share deal to organically promote Petio. No cash required.
 
 ---
 
@@ -108,8 +112,10 @@
 
 **Criteria**: 20K–200K followers, genuine pet content, Vietnamese audience
 **Format**: 1 scanner demo video (15–30 seconds). They create freely — no script.
-**Cost**: ~$150/post (or rev share if they prefer ongoing)
+**Offer**: Free Petio Plus account + 25% rev share on every paying user they bring in. No cash upfront.
 **Owner**: Vy
+
+**Why creators accept this**: They get a free tool to make content with, plus passive income from their audience. We get reach with zero upfront cost. Only pay when they deliver paying users.
 
 ---
 
@@ -134,14 +140,16 @@
 
 ## Metrics to Watch
 
-| Metric | Monthly check | Action if below target |
-|--------|---------------|----------------------|
+| Metric | Target | Action if below |
+|--------|--------|-----------------|
 | VN installs | +500 phase 1, +1,000/mo phase 2 | Increase TikTok cadence, run giveaway |
-| TikTok views (average per video) | 10K+ | Change hook or format |
-| Facebook group engagement | Comments and shares per post | Test different content types |
-| Day-7 retention (VN users) | >20% | Investigate onboarding, not marketing |
-| Free → Plus conversion (VN) | >3% | Check pricing display, paywall copy |
-| Partner-driven installs | 200+ by Month 1 (if partners active) | Review outreach templates, follow up with partners |
+| **Paying VN users** | **25 → 125 → 500 by phase** | Audit paywall trigger + copy before blaming acquisition |
+| **VN MRR** | **$79 → $395 → $1,580 by phase** | Primary financial health check |
+| Annual vs monthly mix | >20% annual | If low: make annual default on paywall, not secondary |
+| TikTok views (avg per video) | 10K+ | Change hook or format |
+| Day-7 retention (VN) | >20% | Fix onboarding, not marketing |
+| Free → Plus conversion (VN) | >3% | Check paywall copy + trigger point |
+| Partner-driven installs | 200+ by Month 1 (if partners active) | Review outreach templates |
 
 ---
 

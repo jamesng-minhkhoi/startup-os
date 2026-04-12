@@ -21,7 +21,7 @@
 |---------|--------|-------|---------|
 | **TikTok VN** | "Boss đang ăn gì?" — scan popular VN brands (Me-O, Ganador, SmartHeart) on camera, in Vietnamese. Hook: "Tôi quét [brand] cho Golden của mình... và đây là kết quả" | Vy (filming) + James (posting) | 5/week |
 | **Facebook pet groups** | 10 key VN groups — observe 1 week, post helpful content first, mention Petio only after trust is built. Tags: hội nuôi chó mèo HCMC, breed groups (Husky, Corgi, Golden), allergy groups | Vy | Daily |
-| **Micro-KOL** | 5–10 Vietnamese pet TikTokers. ~$150/post. Scanner demo format. | Vy | Confirmed before launch |
+| **Micro-KOL** | 5–10 Vietnamese pet TikTokers. No cash — offer free Plus account + 25% rev share on installs they drive. Scanner demo format. | Vy | Confirmed before launch |
 | **Giveaway campaigns** | Comment + share → win 1 month Plus. Run inside Facebook groups. | Vy | Start launch day |
 | **Vietnamese blog** | 10 posts targeting VN-specific queries — "chó ăn được gì", "so sánh thức ăn chó VN". Written natively, not translated. Scanner CTA on every post. | James | 2/week pre-launch |
 | **Zalo OA** | Customer support + push notifications to followers | Vy | Set up before launch |
@@ -57,7 +57,7 @@
 - [ ] Distribution partnership decision made (see [partnership doc](../strategy/vn-distribution-partnerships.md))
 - [ ] 10 Vietnamese Facebook groups joined + active presence established
 - [ ] Zalo OA set up
-- [ ] 5 VN micro-KOLs confirmed for launch week (~$150/post)
+- [ ] 5 VN micro-KOLs confirmed for launch week (free Plus account + 25% rev share — no cash upfront)
 - [ ] Giveaway campaign designed and ready to launch June 14
 - [ ] Vietnamese outreach templates reviewed for tone/slang
 
@@ -84,12 +84,24 @@
 
 ## What Success Looks Like at +30 Days (Vietnam)
 
-| Metric | Target |
-|--------|--------|
-| VN installs | 500+ |
-| Day-7 retention | >25% |
-| Free → Plus conversion | >3% (lower than US — price sensitivity is lower, but bar is still set) |
-| Facebook group follower growth | 500+ organic mentions/shares |
+| Metric | Target | Note |
+|--------|--------|------|
+| VN installs | 500+ | Requires Play Store live — 70% of VN market is Android |
+| **Paying VN subscribers** | **25+** (5% of installs) | At $3.16 net: $79 MRR contribution |
+| Day-7 retention | >20% | Lower bar than US given market maturity |
+| Free → Plus conversion | >3% | If below 2%: audit paywall copy and trigger point |
+| Facebook group mentions/shares | 500+ | Leading indicator for organic growth |
+
+**VN alone reaches $1K gross MRR at ~316 paying subscribers** (achievable by July–Aug 2026 base case at 6K users).
+
+## VN Paywall Framing
+
+Annual pricing in VND sounds large upfront (599K vs 79K/mo). Framing matters:
+- Lead with monthly equivalent: "chỉ **~50K VND/tháng**" (annual plan broken down)
+- Show monthly as the expensive option: "79K/tháng" with a strikethrough or "flexible" label
+- Add "Tiết kiệm 37%" badge on annual
+
+Annual must be the default selection at paywall — same as US. A VN user who pays 599K upfront = ~8x the immediate cash vs 79K/mo.
 
 ---
 
@@ -102,4 +114,4 @@ The US launch leans on Product Hunt + Reddit + TikTok organic reach. Vietnam is 
 - Zalo OA is VN-only — setup is required before launch
 
 **If TikTok works**: 2–3 scanner videos hitting 100K+ views in VN pet communities = 10K users is reachable by September.  
-**If TikTok underperforms**: Fall back to paying 2–3 large VN pet group admins for pinned posts.
+**If TikTok underperforms**: Fall back to deeper Facebook group seeding — post scan results as community content daily in all 10 groups, and offer group admins the Distribution Partner rev share deal (30%) to organically promote Petio to their members. No cash required.

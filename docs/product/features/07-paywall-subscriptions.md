@@ -127,6 +127,7 @@ This is checked at:
 - [ ] **Vietnamese App Store listing** must show VND pricing, not USD
 - [ ] Contextual paywall copy: when shown at a limit, explain which limit was hit ("You've used your 3 free scans today. Upgrade to scan unlimited products.")
 - [ ] Subscription management link in Settings (lets users cancel or manage from within app)
+- [ ] **Annual plan as default** — annual must be the top/highlighted option at paywall. Monthly is secondary. Add "Save 33%" badge. Rationale: 50 annual subscribers = $2,400 upfront cash vs $300/mo from 50 monthly — annual is the path to $1K MRR faster.
 
 ### P2 — Post-Launch
 - [ ] Referral program: "Give 1 month Plus, Get 1 month Plus" via RevenueCat promo codes
