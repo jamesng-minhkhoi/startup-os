@@ -1,0 +1,1752 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Petio Paywall — Design Handoff · 2026-05-08</title>
+<style>
+  :root {
+    --blue-900: #0b1f4d;
+    --blue-700: #1e3a8a;
+    --blue-600: #2748a6;
+    --blue-500: #3b5bd9;
+    --blue-300: #6f8ce8;
+    --pink-500: #ec4899;
+    --pink-300: #f9a8d4;
+    --yellow-400: #facc15;
+    --gray-50:  #f8fafc;
+    --gray-100: #f1f5f9;
+    --gray-200: #e2e8f0;
+    --gray-300: #cbd5e1;
+    --gray-400: #94a3b8;
+    --gray-700: #334155;
+    --gray-900: #0f172a;
+    --green-500: #10b981;
+    --green-50: #ecfdf5;
+    --red-500: #ef4444;
+    --red-50: #fef2f2;
+    --amber-50: #fffbeb;
+    --amber-700: #b45309;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", system-ui, sans-serif;
+    background: #eef2f7;
+    color: var(--gray-900);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+  }
+
+  /* ---------- top bar ---------- */
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: white;
+    border-bottom: 1px solid var(--gray-200);
+    padding: 14px 32px;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .topbar h1 {
+    margin: 0;
+    font-size: 16px;
+    letter-spacing: -0.01em;
+  }
+  .topbar small {
+    color: var(--gray-400);
+    font-size: 12px;
+    font-weight: 400;
+  }
+  .topbar nav {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    margin-left: auto;
+  }
+  .topbar nav a {
+    padding: 6px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--gray-700);
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .topbar nav a:hover { background: var(--gray-100); }
+
+  /* ---------- sections ---------- */
+  section {
+    max-width: 1380px;
+    margin: 0 auto;
+    padding: 56px 32px 24px;
+  }
+  section h2 {
+    font-size: 28px;
+    margin: 0 0 4px;
+    letter-spacing: -0.02em;
+  }
+  section h2 .num {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: var(--blue-700);
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 36px;
+    font-size: 15px;
+    margin-right: 12px;
+    vertical-align: middle;
+  }
+  section .sub {
+    margin: 0 0 32px 48px;
+    color: var(--gray-700);
+    font-size: 14px;
+  }
+
+  /* ---------- intro ---------- */
+  .intro {
+    background: white;
+    padding: 48px 32px;
+    border-bottom: 1px solid var(--gray-200);
+  }
+  .intro-inner {
+    max-width: 1380px;
+    margin: 0 auto;
+  }
+  .intro h1 {
+    margin: 0;
+    font-size: 32px;
+    letter-spacing: -0.02em;
+  }
+  .intro .lead {
+    margin: 12px 0 0;
+    font-size: 15px;
+    color: var(--gray-700);
+    max-width: 760px;
+    line-height: 1.6;
+  }
+  .intro .meta {
+    margin-top: 18px;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    font-size: 12px;
+    color: var(--gray-700);
+  }
+  .intro .meta span strong { color: var(--gray-900); }
+
+  .callout {
+    margin-top: 24px;
+    padding: 16px 18px;
+    background: var(--amber-50);
+    border-left: 3px solid var(--yellow-400);
+    border-radius: 6px;
+    font-size: 13px;
+    color: var(--amber-700);
+    line-height: 1.55;
+  }
+  .callout strong { color: #78350f; }
+
+  /* ---------- tables ---------- */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(15,23,42,0.06);
+    font-size: 13px;
+  }
+  th, td {
+    text-align: left;
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--gray-100);
+    vertical-align: top;
+  }
+  th {
+    background: var(--gray-50);
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--gray-700);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  td code, .codestr {
+    background: var(--gray-100);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-family: "SF Mono", Menlo, monospace;
+    color: var(--blue-700);
+  }
+  tr:last-child td { border-bottom: 0; }
+
+  /* ---------- mock layout ---------- */
+  .mock-layout {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 36px;
+    align-items: start;
+  }
+  @media (max-width: 980px) {
+    .mock-layout { grid-template-columns: 1fr; }
+  }
+
+  /* ---------- spec panel ---------- */
+  .spec {
+    background: white;
+    border-radius: 14px;
+    padding: 22px 24px;
+    box-shadow: 0 2px 8px -4px rgba(15,23,42,0.08);
+  }
+  .spec h3 {
+    margin: 0 0 16px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--gray-700);
+  }
+  .spec-row {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--gray-100);
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 14px;
+    align-items: start;
+  }
+  .spec-row:last-child { border-bottom: 0; }
+  .spec-row .key {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--gray-400);
+    font-weight: 600;
+    padding-top: 2px;
+  }
+  .spec-row .val { font-size: 13px; color: var(--gray-900); }
+  .spec-row .val .en, .spec-row .val .vi {
+    display: block;
+  }
+  .spec-row .val .vi {
+    color: var(--gray-700);
+    font-style: italic;
+    margin-top: 4px;
+    font-size: 12px;
+  }
+  .spec-row .val .vi::before { content: "VI: "; font-style: normal; color: var(--gray-400); font-weight: 600; font-size: 10px; }
+  .spec-row .val .en::before { content: "EN: "; color: var(--gray-400); font-weight: 600; font-size: 10px; }
+
+  /* ---------- controls ---------- */
+  .controls {
+    margin-bottom: 18px;
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .controls strong {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: var(--gray-700);
+    margin-right: 4px;
+    letter-spacing: 0.05em;
+  }
+  .controls button {
+    border: 1px solid var(--gray-200);
+    background: white;
+    color: var(--gray-900);
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all .15s;
+  }
+  .controls button:hover { border-color: var(--blue-500); }
+  .controls button.active {
+    background: var(--blue-700);
+    color: white;
+    border-color: var(--blue-700);
+  }
+  .controls .sep {
+    width: 1px;
+    height: 18px;
+    background: var(--gray-200);
+    margin: 0 6px;
+  }
+
+  /* ---------- phone frame ---------- */
+  .phone {
+    width: 360px;
+    height: 760px;
+    background: black;
+    border-radius: 44px;
+    padding: 10px;
+    box-shadow:
+      0 30px 60px -20px rgba(15, 23, 42, 0.35),
+      0 8px 20px -8px rgba(15, 23, 42, 0.25);
+    position: relative;
+    flex-shrink: 0;
+  }
+  .phone-screen {
+    width: 100%;
+    height: 100%;
+    border-radius: 36px;
+    overflow: hidden;
+    position: relative;
+    background: white;
+  }
+  .notch {
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110px;
+    height: 28px;
+    background: black;
+    border-radius: 16px;
+    z-index: 50;
+  }
+  .status-bar {
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 22px 0 28px;
+    font-size: 13px;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ---------- SURFACE B — main paywall ---------- */
+  .paywall {
+    height: 100%;
+    background:
+      radial-gradient(ellipse at top, rgba(249, 168, 212, 0.15) 0%, transparent 55%),
+      linear-gradient(180deg, var(--blue-700) 0%, var(--blue-900) 100%);
+    color: white;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .paywall .status-bar { color: white; }
+  .close-btn {
+    position: absolute;
+    top: 56px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .hero {
+    padding: 16px 24px 8px;
+    text-align: center;
+  }
+  .hero-art {
+    width: 200px;
+    height: 130px;
+    margin: 6px auto 16px;
+    background: radial-gradient(circle at 30% 40%, rgba(249,168,212,0.4), transparent 60%),
+                radial-gradient(circle at 70% 60%, rgba(111, 140, 232, 0.5), transparent 65%);
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+  }
+  .hero-art .spark {
+    position: absolute;
+    font-size: 18px;
+  }
+  .hero-art .spark.s1 { top: 10px; right: 30px; }
+  .hero-art .spark.s2 { bottom: 18px; left: 26px; }
+  .hero-art .spark.s3 { top: 50%; right: 10px; }
+  .headline {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin: 0;
+  }
+  .headline .accent { color: var(--pink-300); display: block; font-weight: 400; }
+  .sub-copy {
+    margin: 12px 14px 0;
+    font-size: 13px;
+    color: rgba(255,255,255,0.78);
+    line-height: 1.45;
+  }
+  .plan-card {
+    margin: 22px 18px 16px;
+    background: rgba(255,255,255,0.07);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 22px;
+    padding: 18px;
+  }
+  .plan-toggle-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+  }
+  .plan-title-block { display: flex; flex-direction: column; gap: 4px; }
+  .plan-title {
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .save-badge {
+    background: var(--yellow-400);
+    color: var(--gray-900);
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 999px;
+  }
+  .toggle-label { font-size: 11px; color: rgba(255,255,255,0.7); }
+  .toggle {
+    width: 50px;
+    height: 28px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 999px;
+    position: relative;
+    cursor: pointer;
+    transition: background .18s;
+  }
+  .toggle.on { background: var(--pink-300); }
+  .toggle .knob {
+    width: 22px;
+    height: 22px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    transition: left .18s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  }
+  .toggle.on .knob { left: 25px; }
+  .strike {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    text-decoration: line-through;
+  }
+  .price-block {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    margin-top: 4px;
+  }
+  .price {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  .price-period { font-size: 13px; color: rgba(255,255,255,0.7); }
+  .price-sub {
+    font-size: 11px;
+    color: rgba(255,255,255,0.6);
+    margin-top: 4px;
+  }
+  .features {
+    margin: 18px 0 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .features li {
+    display: flex;
+    gap: 10px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.92);
+    line-height: 1.4;
+  }
+  .check {
+    flex: 0 0 18px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: rgba(249,168,212,0.25);
+    color: var(--pink-300);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    margin-top: 1px;
+  }
+  .cta {
+    margin: 14px 18px 0;
+    width: calc(100% - 36px);
+    padding: 15px;
+    background: white;
+    color: var(--blue-700);
+    border: 0;
+    border-radius: 16px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 8px 24px -8px rgba(249,168,212,0.5);
+  }
+  .trust-row {
+    margin: 14px 22px 0;
+    text-align: center;
+    font-size: 11px;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.6;
+  }
+  .trust-row a {
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+  }
+  .trust-row .restore {
+    display: inline-block;
+    margin-top: 6px;
+    color: white;
+    font-weight: 500;
+  }
+  .legal {
+    margin: 12px 22px 28px;
+    text-align: center;
+    font-size: 10px;
+    color: rgba(255,255,255,0.45);
+  }
+  .legal a { color: rgba(255,255,255,0.7); margin: 0 4px; }
+
+  /* ---------- SURFACE A — onboarding ---------- */
+  .onboarding {
+    height: 100%;
+    background: #fdf6ec;
+    overflow-y: auto;
+    position: relative;
+    color: var(--gray-900);
+  }
+  .onb-close {
+    position: absolute;
+    top: 56px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+    background: var(--gray-100);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray-400);
+    cursor: pointer;
+    z-index: 10;
+    font-size: 18px;
+  }
+  .onb-titles { padding: 16px 24px 0; }
+  .onb-eyebrow {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    color: var(--gray-900);
+  }
+  .onb-eyebrow .blue { color: var(--blue-600); display: block; font-weight: 400; }
+  .onb-desc {
+    color: var(--gray-700);
+    font-size: 13px;
+    line-height: 1.5;
+    margin-top: 8px;
+  }
+  .onb-card {
+    margin: 18px 24px 0;
+    background: white;
+    border-radius: 22px;
+    padding: 16px;
+    box-shadow: 0 4px 16px -8px rgba(15,23,42,0.1);
+  }
+  .onb-card-label {
+    font-size: 12px;
+    color: var(--gray-700);
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  .onb-mock {
+    background: var(--gray-50);
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 12px;
+    min-height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 56px;
+    position: relative;
+    overflow: hidden;
+  }
+  .onb-mock-bubble {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    right: 60px;
+    background: white;
+    padding: 10px 12px;
+    border-radius: 14px 14px 14px 4px;
+    font-size: 11px;
+    color: var(--gray-700);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    text-align: left;
+  }
+  .onb-mock .chip {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: var(--red-500);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: 600;
+  }
+  .onb-mock .timeline {
+    position: absolute;
+    bottom: 10px;
+    left: 12px;
+    right: 12px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .onb-mock .timeline span {
+    flex: 1;
+    height: 4px;
+    background: var(--gray-200);
+    border-radius: 2px;
+  }
+  .onb-mock .timeline span.dot { background: var(--pink-500); }
+  .onb-card-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gray-900);
+  }
+  .onb-card-title .pre { color: var(--blue-600); }
+  .onb-card-desc {
+    margin-top: 6px;
+    font-size: 12px;
+    color: var(--gray-700);
+    line-height: 1.45;
+  }
+  .onb-bottom {
+    position: sticky;
+    bottom: 0;
+    padding: 16px 24px 24px;
+    background: linear-gradient(180deg, transparent, #fdf6ec 30%);
+  }
+  .dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+  .dots span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--pink-300);
+    transition: width .18s, background .18s;
+  }
+  .dots span.active {
+    background: var(--pink-500);
+    width: 18px;
+    border-radius: 4px;
+  }
+  .onb-cta {
+    width: 100%;
+    padding: 14px;
+    background: var(--blue-600);
+    color: white;
+    border: 0;
+    border-radius: 16px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  /* ---------- SURFACE C — contextual ---------- */
+  .ctx {
+    height: 100%;
+    background: rgba(15, 23, 42, 0.55);
+    position: relative;
+    overflow: hidden;
+  }
+  .ctx-fake-screen {
+    height: 100%;
+    background: linear-gradient(180deg, white 0%, #f8fafc 100%);
+    opacity: 0.5;
+  }
+  .ctx-sheet {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    border-top-left-radius: 28px;
+    border-top-right-radius: 28px;
+    padding: 12px 20px 24px;
+    box-shadow: 0 -10px 40px rgba(0,0,0,0.2);
+    max-height: 80%;
+    overflow-y: auto;
+  }
+  .grabber {
+    width: 40px;
+    height: 4px;
+    background: var(--gray-200);
+    border-radius: 999px;
+    margin: 0 auto 14px;
+  }
+  .ctx-trigger {
+    background: linear-gradient(135deg, #fff7ed 0%, #fee2e2 100%);
+    color: #9a3412;
+    padding: 12px 14px;
+    border-radius: 14px;
+    font-size: 13px;
+    line-height: 1.4;
+    font-weight: 500;
+    margin-bottom: 16px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .ctx-trigger .ico { font-size: 18px; flex-shrink: 0; }
+  .ctx-headline {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--gray-900);
+    line-height: 1.2;
+    margin: 0;
+  }
+  .ctx-headline .accent { color: var(--blue-600); display: block; font-weight: 400; }
+  .ctx-mini-card {
+    margin-top: 16px;
+    background: var(--gray-50);
+    border: 1.5px solid var(--blue-600);
+    border-radius: 18px;
+    padding: 14px;
+    position: relative;
+  }
+  .ctx-mini-card .save-badge {
+    position: absolute;
+    top: -10px;
+    right: 14px;
+  }
+  .ctx-mini-card .row1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .ctx-mini-card .label {
+    font-size: 13px;
+    color: var(--gray-700);
+    font-weight: 600;
+  }
+  .ctx-mini-card .strike2 {
+    font-size: 12px;
+    color: var(--gray-400);
+    text-decoration: line-through;
+  }
+  .ctx-mini-card .pricerow {
+    margin-top: 4px;
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+  }
+  .ctx-mini-card .pricerow .p {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--gray-900);
+    letter-spacing: -0.02em;
+  }
+  .ctx-mini-card .pricerow .per {
+    font-size: 12px;
+    color: var(--gray-700);
+  }
+  .ctx-mini-card .billed {
+    font-size: 11px;
+    color: var(--gray-400);
+    margin-top: 4px;
+  }
+  .ctx-features {
+    list-style: none;
+    padding: 0;
+    margin: 14px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .ctx-features li {
+    display: flex;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--gray-700);
+  }
+  .ctx-features .ck { color: var(--blue-600); font-weight: 700; }
+  .ctx-cta {
+    margin-top: 16px;
+    width: 100%;
+    padding: 14px;
+    background: var(--blue-600);
+    color: white;
+    border: 0;
+    border-radius: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .ctx-later {
+    margin-top: 8px;
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    color: var(--gray-400);
+    border: 0;
+    font-size: 13px;
+    cursor: pointer;
+  }
+
+  /* ---------- locale handling ---------- */
+  body[data-locale="vi"] [data-en] { display: none; }
+  body[data-locale="en"] [data-vi] { display: none; }
+  body[data-locale="vi"] [data-en-block] { display: none !important; }
+  body[data-locale="en"] [data-vi-block] { display: none !important; }
+
+  /* ---------- callouts ---------- */
+  .nope {
+    background: var(--red-50);
+    border-left: 3px solid var(--red-500);
+    color: #7f1d1d;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    margin: 10px 0;
+  }
+  .yes {
+    background: var(--green-50);
+    border-left: 3px solid var(--green-500);
+    color: #14532d;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    margin: 10px 0;
+  }
+  .pricing-table { font-size: 14px; }
+  .pricing-table td { font-size: 14px; }
+  .pricing-table .price-cell { font-weight: 600; color: var(--gray-900); }
+
+  /* ---------- footer ---------- */
+  footer {
+    margin-top: 40px;
+    padding: 32px;
+    text-align: center;
+    color: var(--gray-400);
+    font-size: 12px;
+    border-top: 1px solid var(--gray-200);
+    background: white;
+  }
+</style>
+</head>
+<body data-locale="en" data-plan="annual" data-ctx="scan" data-onb="1">
+
+<!-- ============ TOPBAR ============ -->
+<div class="topbar">
+  <div>
+    <h1>Petio Paywall — Design Handoff</h1>
+    <small>2026-05-08 · For Ngoc · From James + Vy</small>
+  </div>
+  <nav>
+    <a href="#pricing">Pricing</a>
+    <a href="#surface-a">Surface A · Onboarding</a>
+    <a href="#surface-b">Surface B · Main</a>
+    <a href="#surface-c">Surface C · Contextual</a>
+  </nav>
+</div>
+
+<!-- ============ INTRO ============ -->
+<div class="intro">
+  <div class="intro-inner">
+    <h1>Paywall — light refresh for June 14, 2026 launch</h1>
+    <p class="lead">
+      Three surfaces (onboarding upsell · main paywall · contextual sheet). All three share visual DNA.
+      Pricing, copy, and feature list here are the canonical source — the strings in the app today are out of date.
+      <strong>Toggle locale, plan, contextual trigger, and onboarding slide using the controls in each section.</strong>
+    </p>
+    <div class="meta">
+      <span><strong>Launch:</strong> June 14, 2026</span>
+      <span><strong>Markets:</strong> US (USD) · Vietnam (VND)</span>
+      <span><strong>Default plan:</strong> Annual ⭐</span>
+      <span><strong>Source of truth:</strong> docs/product/features/07-paywall-subscriptions.md</span>
+      <span><strong>Companion brief:</strong> docs/product/paywall-content-brief_2026-05-08.md</span>
+    </div>
+    <div class="callout">
+      <strong>Copy rule:</strong> Pet profiles are framed as <strong>unlimited</strong>. AI chat, scans, memories, and document storage say <strong>"higher usage"</strong> or similar. <strong>Never disclose specific Plus-tier numbers in user-facing copy</strong> — internal anti-abuse caps exist but are an engineering concern, not a marketing one.
+    </div>
+  </div>
+</div>
+
+<!-- ============ § 1 PRICING ============ -->
+<section id="pricing">
+  <h2><span class="num">1</span>Pricing</h2>
+  <p class="sub">Annual savings vs monthly × 12 = <strong>33% (US)</strong> / <strong>37% (VN)</strong>. Use one badge globally: "Save 33%".</p>
+
+  <table class="pricing-table">
+    <thead>
+      <tr>
+        <th style="width:24%">Tier</th>
+        <th>US / Global</th>
+        <th>Vietnam</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Free</strong></td>
+        <td>$0</td>
+        <td>0 ₫</td>
+      </tr>
+      <tr>
+        <td><strong>Plus Monthly</strong></td>
+        <td class="price-cell">$5.99 / month</td>
+        <td class="price-cell">79.000 ₫ / tháng</td>
+      </tr>
+      <tr>
+        <td><strong>Plus Annual ⭐</strong></td>
+        <td class="price-cell">$47.99 / year (~$4.00/mo)</td>
+        <td class="price-cell">599.000 ₫ / năm (~50.000 ₫/tháng)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="yes" style="margin-top:18px">
+    <strong>Display rules.</strong>
+    (1) Annual selected by default — toggle defaults to <code>on</code>.
+    (2) US users see USD only. VN users see VND only. Never mix.
+    (3) Price strings come from RevenueCat <code>priceString</code> — no hardcoded fallbacks.
+    (4) Strikethrough comparison: $71.88 → $47.99 (US) · 948.000 ₫ → 599.000 ₫ (VN).
+  </div>
+</section>
+
+<!-- ============ § 3 SURFACE A ============ -->
+<section id="surface-a">
+  <h2><span class="num">2</span>Surface A · Onboarding upsell</h2>
+  <p class="sub">3-slide carousel after the social-proof step. Skippable from slide 1 (App Store requirement). Routes to Surface B on final CTA. <strong>Replaces today's 2-slide flow ("Family", "Memories")</strong> — Family Sync is cut.</p>
+
+  <div class="controls">
+    <strong>Slide:</strong>
+    <button id="onb-1" class="active" onclick="setOnb(1)">1 · Peti chat</button>
+    <button id="onb-2" onclick="setOnb(2)">2 · Scanner</button>
+    <button id="onb-3" onclick="setOnb(3)">3 · Memories</button>
+    <span class="sep"></span>
+    <strong>Locale:</strong>
+    <button class="loc-btn active" data-loc="en" onclick="setLocale('en')">English</button>
+    <button class="loc-btn" data-loc="vi" onclick="setLocale('vi')">Tiếng Việt</button>
+  </div>
+
+  <div class="mock-layout">
+
+    <div class="phone">
+      <div class="phone-screen">
+        <div class="notch"></div>
+        <div class="onboarding">
+          <div class="status-bar"><span>9:41</span><span>● ● ●</span></div>
+          <div class="onb-close">×</div>
+
+          <!-- Slide 1: Peti chat -->
+          <div class="onb-slide" data-slide="1">
+            <div class="onb-titles" style="padding-top:12px;">
+              <div class="onb-eyebrow">
+                <span data-en>Peti</span><span data-vi>Peti</span>
+                <span class="blue">
+                  <span data-en>knows your pet</span>
+                  <span data-vi>hiểu thú cưng của bạn</span>
+                </span>
+              </div>
+              <div class="onb-desc">
+                <span data-en>Ask anything about your pet's food, behavior, or health — answers tailored to their breed, age, and allergies.</span>
+                <span data-vi>Hỏi bất cứ điều gì về ăn uống, hành vi hay sức khỏe — câu trả lời riêng cho giống, tuổi và dị ứng của bé.</span>
+              </div>
+            </div>
+            <div class="onb-card">
+              <div class="onb-card-label">
+                <span data-en>What's inside:</span>
+                <span data-vi>Có gì bên trong:</span>
+              </div>
+              <div class="onb-mock">
+                🐶
+                <div class="onb-mock-bubble" data-en>"Is chocolate ok for Max?"<br><span style="color:var(--blue-600);font-weight:600;">No — toxic to dogs his size.</span></div>
+                <div class="onb-mock-bubble" data-vi>"Max ăn sô-cô-la được không?"<br><span style="color:var(--blue-600);font-weight:600;">Không — độc với chó cỡ này.</span></div>
+              </div>
+              <div class="onb-card-title">
+                <span class="pre">Peti chat:</span>
+                <span data-en>answers tailored to your pet</span>
+                <span data-vi>câu trả lời riêng cho bé</span>
+              </div>
+              <div class="onb-card-desc">
+                <span data-en>Personalized to your pet's breed, age, and allergies — not a generic chatbot.</span>
+                <span data-vi>Cá nhân hóa theo giống, tuổi, dị ứng của bé — không phải chatbot thông thường.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2: Scanner -->
+          <div class="onb-slide" data-slide="2" style="display:none">
+            <div class="onb-titles" style="padding-top:12px;">
+              <div class="onb-eyebrow">
+                <span data-en>Scan</span><span data-vi>Quét</span>
+                <span class="blue">
+                  <span data-en>before they eat it</span>
+                  <span data-vi>trước khi cho ăn</span>
+                </span>
+              </div>
+              <div class="onb-desc">
+                <span data-en>Point your camera at any pet food. Petio flags allergens specific to your pet — not generic warnings.</span>
+                <span data-vi>Hướng camera vào bất kỳ thức ăn nào. Petio cảnh báo dị ứng riêng cho bé — không phải lời khuyên chung.</span>
+              </div>
+            </div>
+            <div class="onb-card">
+              <div class="onb-card-label">
+                <span data-en>What's inside:</span>
+                <span data-vi>Có gì bên trong:</span>
+              </div>
+              <div class="onb-mock">
+                🍖
+                <div class="chip">
+                  <span data-en>Unsafe for Max</span>
+                  <span data-vi>Không an toàn cho Max</span>
+                </div>
+              </div>
+              <div class="onb-card-title">
+                <span class="pre">Scanner:</span>
+                <span data-en>safe-for-your-pet, not generic</span>
+                <span data-vi>an toàn cho bé, không chung chung</span>
+              </div>
+              <div class="onb-card-desc">
+                <span data-en>Reads the label, cross-checks your pet's allergens, gives you a Safe / Caution / Unsafe verdict in seconds.</span>
+                <span data-vi>Đọc nhãn, đối chiếu dị ứng của bé, đưa ra kết luận An toàn / Lưu ý / Không an toàn trong vài giây.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3: Memories -->
+          <div class="onb-slide" data-slide="3" style="display:none">
+            <div class="onb-titles" style="padding-top:12px;">
+              <div class="onb-eyebrow">
+                <span data-en>Their whole story,</span>
+                <span data-vi>Cả hành trình của bé,</span>
+                <span class="blue">
+                  <span data-en>in one place</span>
+                  <span data-vi>ở một nơi</span>
+                </span>
+              </div>
+              <div class="onb-desc">
+                <span data-en>Photos, vet docs, and milestones — saved and searchable, so nothing important gets lost.</span>
+                <span data-vi>Ảnh, hồ sơ thú y và cột mốc — lưu và tìm được, để không bỏ lỡ điều gì quan trọng.</span>
+              </div>
+            </div>
+            <div class="onb-card">
+              <div class="onb-card-label">
+                <span data-en>What's inside:</span>
+                <span data-vi>Có gì bên trong:</span>
+              </div>
+              <div class="onb-mock">
+                📸
+                <div class="timeline">
+                  <span class="dot"></span><span></span><span class="dot"></span><span></span><span></span><span class="dot"></span><span></span>
+                </div>
+              </div>
+              <div class="onb-card-title">
+                <span class="pre">Memories + Documents:</span>
+                <span data-en>everything in one timeline</span>
+                <span data-vi>mọi thứ trên một dòng thời gian</span>
+              </div>
+              <div class="onb-card-desc">
+                <span data-en>Vet visits, vaccinations, photos, milestones — searchable by date and pet.</span>
+                <span data-vi>Lần khám, tiêm phòng, ảnh, cột mốc — tìm theo ngày và theo bé.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="onb-bottom">
+            <div class="dots">
+              <span class="dot-1 active"></span>
+              <span class="dot-2"></span>
+              <span class="dot-3"></span>
+            </div>
+            <button class="onb-cta">
+              <span class="onb-cta-1">
+                <span data-en>See what's next</span>
+                <span data-vi>Xem tiếp</span>
+              </span>
+              <span class="onb-cta-2" style="display:none">
+                <span data-en>See what's next</span>
+                <span data-vi>Xem tiếp</span>
+              </span>
+              <span class="onb-cta-3" style="display:none">
+                <span data-en>Continue to Plus</span>
+                <span data-vi>Tiếp tục đến Plus</span>
+              </span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="spec">
+      <h3>Copy spec — Surface A · Slide <span id="slide-num">1</span></h3>
+
+      <div class="spec-row">
+        <div class="key">Eyebrow</div>
+        <div class="val" id="spec-a-eyebrow"></div>
+      </div>
+      <div class="spec-row">
+        <div class="key">Description</div>
+        <div class="val" id="spec-a-desc"></div>
+      </div>
+      <div class="spec-row">
+        <div class="key">Card label</div>
+        <div class="val">
+          <span class="en">What's inside:</span>
+          <span class="vi">Có gì bên trong:</span>
+        </div>
+      </div>
+      <div class="spec-row">
+        <div class="key">Card title</div>
+        <div class="val" id="spec-a-cardtitle"></div>
+      </div>
+      <div class="spec-row">
+        <div class="key">Card body</div>
+        <div class="val" id="spec-a-cardbody"></div>
+      </div>
+      <div class="spec-row">
+        <div class="key">CTA</div>
+        <div class="val" id="spec-a-cta"></div>
+      </div>
+      <div class="spec-row">
+        <div class="key">Skip</div>
+        <div class="val">Top-right ✕ button. Required visible from slide 1 (App Store rule). Tapping → returns to home, no paywall shown.</div>
+      </div>
+      <div class="spec-row">
+        <div class="key">Visual notes</div>
+        <div class="val" id="spec-a-visual"></div>
+      </div>
+      <div class="spec-row">
+        <div class="key">i18n keys</div>
+        <div class="val">
+          <code>unlockExperience.slide<span id="spec-a-key">1</span>.eyebrow</code><br>
+          <code>unlockExperience.slide<span id="spec-a-key2">1</span>.description</code><br>
+          <code>unlockExperience.slide<span id="spec-a-key3">1</span>.cardTitle</code><br>
+          <em style="color:var(--gray-400);font-size:11px">⚠ Today's keys (<code>unlockExperience.family.*</code>, <code>memories.*</code>) need replacing — Family is cut.</em>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ § 4 SURFACE B ============ -->
+<section id="surface-b">
+  <h2><span class="num">3</span>Surface B · Main paywall</h2>
+  <p class="sub">The purchase screen. Annual default. Single primary CTA. Restore + legal links visible. Reachable from onboarding (after Surface A) and from Settings.</p>
+
+  <div class="controls">
+    <strong>Plan:</strong>
+    <button id="pl-annual" class="active" onclick="setPlan('annual')">Annual ⭐</button>
+    <button id="pl-monthly" onclick="setPlan('monthly')">Monthly</button>
+    <span class="sep"></span>
+    <strong>Locale:</strong>
+    <button class="loc-btn active" data-loc="en" onclick="setLocale('en')">English (USD)</button>
+    <button class="loc-btn" data-loc="vi" onclick="setLocale('vi')">Tiếng Việt (VND)</button>
+  </div>
+
+  <div class="mock-layout">
+
+    <div class="phone">
+      <div class="phone-screen">
+        <div class="notch"></div>
+        <div class="paywall">
+          <div class="status-bar"><span>9:41</span><span>● ● ●</span></div>
+          <div class="close-btn">×</div>
+
+          <div class="hero">
+            <div class="hero-art">
+              🐾
+              <span class="spark s1">✦</span>
+              <span class="spark s2">✧</span>
+              <span class="spark s3">✦</span>
+            </div>
+            <h1 class="headline">
+              <span data-en>Petio Plus —</span>
+              <span data-vi>Petio Plus —</span>
+              <span class="accent">
+                <span data-en>more for every pet you care for</span>
+                <span data-vi>thêm cho mỗi bé bạn chăm</span>
+              </span>
+            </h1>
+            <p class="sub-copy">
+              <span data-en>Higher daily AI usage, more scans, unlimited pet profiles, and expanded storage for memories and documents.</span>
+              <span data-vi>Sử dụng AI nhiều hơn mỗi ngày, quét nhiều hơn, hồ sơ thú cưng không giới hạn, và mở rộng lưu trữ cho kỷ niệm và tài liệu.</span>
+            </p>
+          </div>
+
+          <div class="plan-card">
+            <div class="plan-toggle-row">
+              <div class="plan-title-block">
+                <div class="plan-title">
+                  <span data-en-block>
+                    <span class="js-plan-annual">Plus Annual</span><span class="js-plan-monthly" style="display:none">Plus Monthly</span>
+                  </span>
+                  <span data-vi-block>
+                    <span class="js-plan-annual">Plus Hàng Năm</span><span class="js-plan-monthly" style="display:none">Plus Hàng Tháng</span>
+                  </span>
+                  <span class="save-badge js-annual-only">Save 33%</span>
+                </div>
+                <div class="toggle-label">
+                  <span data-en>Annual · Monthly</span>
+                  <span data-vi>Hàng năm · Hàng tháng</span>
+                </div>
+              </div>
+              <div class="toggle on" id="planToggle" onclick="togglePlan()">
+                <div class="knob"></div>
+              </div>
+            </div>
+
+            <div class="js-annual-only" data-en-block>
+              <div class="strike">$71.88</div>
+              <div class="price-block">
+                <span class="price">$47.99</span>
+                <span class="price-period">/ year</span>
+              </div>
+              <div class="price-sub">Just $4.00/month, billed annually</div>
+            </div>
+            <div class="js-annual-only" data-vi-block>
+              <div class="strike">948.000 ₫</div>
+              <div class="price-block">
+                <span class="price">599.000 ₫</span>
+                <span class="price-period">/ năm</span>
+              </div>
+              <div class="price-sub">Chỉ ~50.000 ₫/tháng, thanh toán hàng năm</div>
+            </div>
+            <div class="js-monthly-only" style="display:none" data-en-block>
+              <div class="price-block">
+                <span class="price">$5.99</span>
+                <span class="price-period">/ month</span>
+              </div>
+              <div class="price-sub">Billed monthly</div>
+            </div>
+            <div class="js-monthly-only" style="display:none" data-vi-block>
+              <div class="price-block">
+                <span class="price">79.000 ₫</span>
+                <span class="price-period">/ tháng</span>
+              </div>
+              <div class="price-sub">Thanh toán hàng tháng</div>
+            </div>
+
+            <ul class="features">
+              <li><span class="check">✓</span>
+                <span data-en>Higher daily Peti AI usage — your pet's personal advisor</span>
+                <span data-vi>Dùng Peti AI nhiều hơn mỗi ngày — trợ lý riêng cho bé</span>
+              </li>
+              <li><span class="check">✓</span>
+                <span data-en>Higher product scan usage — allergen warnings tailored to your pet</span>
+                <span data-vi>Quét sản phẩm nhiều hơn — cảnh báo dị ứng riêng cho bé</span>
+              </li>
+              <li><span class="check">✓</span>
+                <span data-en>Unlimited pet profiles — care for every pet</span>
+                <span data-vi>Hồ sơ thú cưng không giới hạn — chăm cho mọi bé</span>
+              </li>
+              <li><span class="check">✓</span>
+                <span data-en>Capture more memories · expanded document storage</span>
+                <span data-vi>Lưu thêm kỷ niệm · mở rộng dung lượng tài liệu</span>
+              </li>
+              <li><span class="check">✓</span>
+                <span data-en>Early access to new AI features</span>
+                <span data-vi>Truy cập sớm các tính năng AI mới</span>
+              </li>
+            </ul>
+          </div>
+
+          <button class="cta">
+            <span data-en-block>
+              <span class="js-annual-only">Get Plus — Save 33%</span>
+              <span class="js-monthly-only" style="display:none">Get Plus Monthly</span>
+            </span>
+            <span data-vi-block>
+              <span class="js-annual-only">Nhận Plus — Tiết kiệm 33%</span>
+              <span class="js-monthly-only" style="display:none">Nhận Plus Hàng Tháng</span>
+            </span>
+          </button>
+
+          <div class="trust-row">
+            <span data-en>Cancel anytime · Auto-renews · </span>
+            <span data-vi>Hủy bất kỳ lúc nào · Tự động gia hạn · </span>
+            <a class="restore" href="#">
+              <span data-en>Restore purchases</span>
+              <span data-vi>Khôi phục giao dịch</span>
+            </a>
+          </div>
+
+          <div class="legal">
+            <a href="#" data-en>Terms</a><a href="#" data-vi>Điều khoản</a>
+            ·
+            <a href="#" data-en>Privacy</a><a href="#" data-vi>Quyền riêng tư</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="spec">
+      <h3>Copy spec — Surface B · Main paywall</h3>
+
+      <div class="spec-row">
+        <div class="key">Hero illustration</div>
+        <div class="val">Pet + Peti glow + sparkles. Warm not techy. Replaces today's <code>capa.svg</code> placeholder. Width ~220px, height ~140px, vertically centered.</div>
+      </div>
+
+      <div class="spec-row">
+        <div class="key">Headline (line 1)</div>
+        <div class="val">
+          <span class="en">Petio Plus —</span>
+          <span class="vi">Petio Plus —</span>
+        </div>
+      </div>
+      <div class="spec-row">
+        <div class="key">Headline (line 2, accent)</div>
+        <div class="val">
+          <span class="en">more for every pet you care for</span>
+          <span class="vi">thêm cho mỗi bé bạn chăm</span>
+          <em style="color:var(--gray-400);font-size:11px;display:block;margin-top:4px">Color: pink-300 accent. Same weight as line 1.</em>
+        </div>
+      </div>
+      <div class="spec-row">
+        <div class="key">Sub-headline</div>
+        <div class="val">
+          <span class="en">Higher daily AI usage, more scans, unlimited pet profiles, and expanded storage for memories and documents.</span>
+          <span class="vi">Sử dụng AI nhiều hơn mỗi ngày, quét nhiều hơn, hồ sơ thú cưng không giới hạn, và mở rộng lưu trữ cho kỷ niệm và tài liệu.</span>
+        </div>
+      </div>
+
+      <div class="spec-row">
+        <div class="key">Plan title (annual)</div>
+        <div class="val">
+          <span class="en">Plus Annual</span>
+          <span class="vi">Plus Hàng Năm</span>
+        </div>
+      </div>
+      <div class="spec-row">
+        <div class="key">Plan title (monthly)</div>
+        <div class="val">
+          <span class="en">Plus Monthly</span>
+          <span class="vi">Plus Hàng Tháng</span>
+        </div>
+      </div>
+      <div class="spec-row">
+        <div class="key">Save badge</div>
+        <div class="val">
+          <span class="en">Save 33%</span>
+          <span class="vi">Tiết kiệm 33%</span>
+          <em style="color:var(--gray-400);font-size:11px;display:block;margin-top:4px">Yellow-400 background, gray-900 text, 999px radius. Show only on annual.</em>
+        </div>
+      </div>
+      <div class="spec-row">
+        <div class="key">Annual price (US)</div>
+        <div class="val">
+          Strike: <code>$71.88</code> · Price: <code>$47.99</code> · Period: <code>/ year</code><br>
+          Sub: <code>Just $4.00/month, billed annually</code>
+        </div>
+      </div>
+      <div class="spec-row">
+        <div class="key">Annual price (VN)</div>
+        <div class="val">
+          Strike: <code>948.000 ₫</code> · Price: <code>599.000 ₫</code> · Period: <code>/ năm</code><br>
+          Sub: <code>Chỉ ~50.000 ₫/tháng, thanh toán hàng năm</code>
+        </div>
+      </div>
+      <div class="spec-row">
+        <div class="key">Monthly price (US)</div>
+        <div class="val">
+          Price: <code>$5.99</code> · Period: <code>/ month</code> · Sub: <code>Billed monthly</code>
+        </div>
+      </div>
+      <div class="spec-row">
+        <div class="key">Monthly price (VN)</div>
+        <div class="val">
+          Price: <code>79.000 ₫</code> · Period: <code>/ tháng</code> · Sub: <code>Thanh toán hàng tháng</code>
+        </div>
+      </div>
+
+      <div class="spec-row">
+        <div class="key">Features (5 max)</div>
+        <div class="val">
+          <ol style="padding-left:18px;margin:0;font-size:13px;line-height:1.7;">
+            <li><span class="en">Higher daily Peti AI usage — your pet's personal advisor</span><span class="vi">Dùng Peti AI nhiều hơn mỗi ngày — trợ lý riêng cho bé</span></li>
+            <li><span class="en">Higher product scan usage — allergen warnings tailored to your pet</span><span class="vi">Quét sản phẩm nhiều hơn — cảnh báo dị ứng riêng cho bé</span></li>
+            <li><span class="en">Unlimited pet profiles — care for every pet</span><span class="vi">Hồ sơ thú cưng không giới hạn — chăm cho mọi bé</span></li>
+            <li><span class="en">Capture more memories · expanded document storage</span><span class="vi">Lưu thêm kỷ niệm · mở rộng dung lượng tài liệu</span></li>
+            <li><span class="en">Early access to new AI features</span><span class="vi">Truy cập sớm các tính năng AI mới</span></li>
+          </ol>
+          <div class="nope" style="margin-top:10px"><strong>Do NOT include:</strong> Family Sync (cut), Reminders (removed), Widgets (not shipping), advanced charts/Statistics (Stats tab removed).</div>
+          <div class="nope" style="margin-top:8px;background:#fffbeb;border-left-color:var(--yellow-400);color:var(--amber-700);"><strong>Do NOT disclose specific Plus-tier numbers</strong> in user-facing copy. "Unlimited" applies <em>only</em> to pet profiles. Everything else: "higher", "more", "expanded". Internal anti-abuse caps exist but stay engineering-side.</div>
+        </div>
+      </div>
+
+      <div class="spec-row">
+        <div class="key">Primary CTA (annual)</div>
+        <div class="val">
+          <span class="en">Get Plus — Save 33%</span>
+          <span class="vi">Nhận Plus — Tiết kiệm 33%</span>
+        </div>
+      </div>
+      <div class="spec-row">
+        <div class="key">Primary CTA (monthly)</div>
+        <div class="val">
+          <span class="en">Get Plus Monthly</span>
+          <span class="vi">Nhận Plus Hàng Tháng</span>
+        </div>
+      </div>
+      <div class="spec-row">
+        <div class="key">Trust row</div>
+        <div class="val">
+          <span class="en">Cancel anytime · Auto-renews · Restore purchases</span>
+          <span class="vi">Hủy bất kỳ lúc nào · Tự động gia hạn · Khôi phục giao dịch</span>
+        </div>
+      </div>
+      <div class="spec-row">
+        <div class="key">Legal links</div>
+        <div class="val">
+          <span class="en">Terms · Privacy</span>
+          <span class="vi">Điều khoản · Quyền riêng tư</span>
+          <em style="color:var(--gray-400);font-size:11px;display:block;margin-top:4px">Required by App Store / Google Play for auto-renewing subscriptions. Open in in-app browser, not external.</em>
+        </div>
+      </div>
+      <div class="spec-row">
+        <div class="key">Close (✕)</div>
+        <div class="val">Top-right, always visible. <code>rgba(255,255,255,0.15)</code> background, blur backdrop, 32×32. Tapping → returns to previous screen. <strong>Never auto-dismiss this screen.</strong></div>
+      </div>
+      <div class="spec-row">
+        <div class="key">i18n keys</div>
+        <div class="val">
+          <code>paywall.headline</code>, <code>paywall.headlineAccent</code>, <code>paywall.subHeadline</code>,
+          <code>paywall.planTitleAnnual</code>, <code>paywall.planTitleMonthly</code>,
+          <code>paywall.saveBadge</code>, <code>paywall.cta.annual</code>, <code>paywall.cta.monthly</code>,
+          <code>paywall.trustRow</code>, <code>paywall.legal.terms</code>, <code>paywall.legal.privacy</code>,
+          <code>paywall.features.[1..5]</code>
+          <em style="color:var(--gray-400);font-size:11px;display:block;margin-top:4px">⚠ Existing keys (<code>headerTitle</code>, <code>headerSubtitle</code>, <code>features.unlimited|family|insights|widgets</code>) must be replaced.</em>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ § 5 SURFACE C ============ -->
+<section id="surface-c">
+  <h2><span class="num">4</span>Surface C · Contextual sheet</h2>
+  <p class="sub">Bottom sheet shown when a Free user hits a limit. ~78% screen height. Lead with the limit they hit (relevance > genericness). Same plan card as Surface B but compressed (no hero image).</p>
+
+  <div class="controls">
+    <strong>Trigger:</strong>
+    <button id="ctx-scan" class="active" onclick="setCtx('scan')">📸 Scan limit (4th today)</button>
+    <button id="ctx-chat" onclick="setCtx('chat')">💬 Chat limit (6th today)</button>
+    <button id="ctx-pet" onclick="setCtx('pet')">🐾 2nd pet</button>
+    <button id="ctx-memory" onclick="setCtx('memory')">📷 Memory limit (4th today)</button>
+    <button id="ctx-doc" onclick="setCtx('doc')">📄 Doc limit (6th total)</button>
+    <span class="sep"></span>
+    <strong>Locale:</strong>
+    <button class="loc-btn active" data-loc="en" onclick="setLocale('en')">English</button>
+    <button class="loc-btn" data-loc="vi" onclick="setLocale('vi')">Tiếng Việt</button>
+  </div>
+
+  <div class="mock-layout">
+
+    <div class="phone">
+      <div class="phone-screen">
+        <div class="notch"></div>
+        <div class="ctx">
+          <div class="status-bar" style="color:var(--gray-700);"><span>9:41</span><span>● ● ●</span></div>
+          <div class="ctx-fake-screen"></div>
+
+          <div class="ctx-sheet">
+            <div class="grabber"></div>
+
+            <div class="ctx-trigger ctx-scan-only">
+              <span class="ico">📸</span>
+              <span data-en>You've used your <strong>3 free scans</strong> today. Plus = higher daily usage.</span>
+              <span data-vi>Bạn đã dùng hết <strong>3 lượt quét</strong> miễn phí hôm nay. Plus = quét nhiều hơn mỗi ngày.</span>
+            </div>
+            <div class="ctx-trigger ctx-chat-only" style="display:none">
+              <span class="ico">💬</span>
+              <span data-en>Peti's a bit chatty today — you've hit <strong>5 free messages</strong>. Plus = higher daily chat.</span>
+              <span data-vi>Peti hơi nhiều chuyện hôm nay — bạn đã dùng hết <strong>5 tin nhắn</strong> miễn phí. Plus = chat nhiều hơn mỗi ngày.</span>
+            </div>
+            <div class="ctx-trigger ctx-pet-only" style="display:none">
+              <span class="ico">🐾</span>
+              <span data-en>Got another pet? Plus = unlimited pet profiles.</span>
+              <span data-vi>Có thêm bé nữa? Plus = hồ sơ thú cưng không giới hạn.</span>
+            </div>
+            <div class="ctx-trigger ctx-memory-only" style="display:none">
+              <span class="ico">📷</span>
+              <span data-en>You've saved <strong>3 memories</strong> today. Plus = higher daily capture.</span>
+              <span data-vi>Bạn đã lưu <strong>3 kỷ niệm</strong> hôm nay. Plus = lưu nhiều hơn mỗi ngày.</span>
+            </div>
+            <div class="ctx-trigger ctx-doc-only" style="display:none">
+              <span class="ico">📄</span>
+              <span data-en>Document storage is full on Free (<strong>5 docs</strong>). Plus = expanded storage.</span>
+              <span data-vi>Bộ nhớ tài liệu đã đầy ở gói Free (<strong>5 tài liệu</strong>). Plus = mở rộng dung lượng.</span>
+            </div>
+
+            <h2 class="ctx-headline">
+              <span data-en>Keep going with</span>
+              <span data-vi>Tiếp tục với</span>
+              <span class="accent">Petio Plus</span>
+            </h2>
+
+            <div class="ctx-mini-card">
+              <span class="save-badge">Save 33%</span>
+              <div class="row1">
+                <span class="label">
+                  <span data-en>Plus Annual ⭐</span>
+                  <span data-vi>Plus Hàng Năm ⭐</span>
+                </span>
+                <span class="strike2" data-en>$71.88</span>
+                <span class="strike2" data-vi>948.000 ₫</span>
+              </div>
+              <div class="pricerow" data-en-block>
+                <span class="p">$47.99</span>
+                <span class="per">/ year · ~$4.00/mo</span>
+              </div>
+              <div class="pricerow" data-vi-block>
+                <span class="p">599.000 ₫</span>
+                <span class="per">/ năm · ~50.000 ₫/tháng</span>
+              </div>
+              <div class="billed">
+                <span data-en>Billed annually · Cancel anytime</span>
+                <span data-vi>Thanh toán hàng năm · Hủy bất kỳ lúc nào</span>
+              </div>
+
+              <ul class="ctx-features">
+                <li><span class="ck">✓</span><span data-en>Higher Peti AI &amp; scan usage</span><span data-vi>Dùng Peti AI &amp; quét nhiều hơn</span></li>
+                <li><span class="ck">✓</span><span data-en>Unlimited pet profiles</span><span data-vi>Hồ sơ thú cưng không giới hạn</span></li>
+                <li><span class="ck">✓</span><span data-en>Capture more memories · expanded storage</span><span data-vi>Lưu thêm kỷ niệm · mở rộng dung lượng</span></li>
+              </ul>
+            </div>
+
+            <button class="ctx-cta">
+              <span data-en>Get Plus — Save 33%</span>
+              <span data-vi>Nhận Plus — Tiết kiệm 33%</span>
+            </button>
+            <button class="ctx-later">
+              <span data-en>Maybe later</span>
+              <span data-vi>Để sau</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="spec">
+      <h3>Copy spec — Surface C · Triggers</h3>
+
+      <table>
+        <thead>
+          <tr><th>Trigger</th><th>Header copy (EN / VI)</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>📸 Scan limit</strong><br><em style="color:var(--gray-400);font-size:11px">After 3 scans on Free</em></td>
+            <td>
+              <div class="en">You've used your <strong>3 free scans</strong> today. Plus = higher daily usage.</div>
+              <div class="vi">Bạn đã dùng hết <strong>3 lượt quét</strong> miễn phí hôm nay. Plus = quét nhiều hơn mỗi ngày.</div>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>💬 AI chat limit</strong><br><em style="color:var(--gray-400);font-size:11px">After 5 chat messages on Free</em></td>
+            <td>
+              <div class="en">Peti's a bit chatty today — you've hit <strong>5 free messages</strong>. Plus = higher daily chat.</div>
+              <div class="vi">Peti hơi nhiều chuyện hôm nay — bạn đã dùng hết <strong>5 tin nhắn</strong> miễn phí. Plus = chat nhiều hơn mỗi ngày.</div>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>🐾 2nd pet profile</strong><br><em style="color:var(--gray-400);font-size:11px">When trying to add 2nd pet</em></td>
+            <td>
+              <div class="en">Got another pet? Plus = <strong>unlimited pet profiles</strong>.</div>
+              <div class="vi">Có thêm bé nữa? Plus = <strong>hồ sơ thú cưng không giới hạn</strong>.</div>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>📷 Memory limit</strong><br><em style="color:var(--gray-400);font-size:11px">After 3 memories saved on Free</em></td>
+            <td>
+              <div class="en">You've saved <strong>3 memories</strong> today. Plus = higher daily capture.</div>
+              <div class="vi">Bạn đã lưu <strong>3 kỷ niệm</strong> hôm nay. Plus = lưu nhiều hơn mỗi ngày.</div>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>📄 Document limit</strong><br><em style="color:var(--gray-400);font-size:11px">After 5 docs on Free</em></td>
+            <td>
+              <div class="en">Document storage is full on Free (<strong>5 docs</strong>). Plus = expanded storage.</div>
+              <div class="vi">Bộ nhớ tài liệu đã đầy ở gói Free (<strong>5 tài liệu</strong>). Plus = mở rộng dung lượng.</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div style="margin-top:18px"></div>
+      <div class="spec-row">
+        <div class="key">Headline</div>
+        <div class="val">
+          <span class="en">Keep going with <strong>Petio Plus</strong></span>
+          <span class="vi">Tiếp tục với <strong>Petio Plus</strong></span>
+        </div>
+      </div>
+      <div class="spec-row">
+        <div class="key">Plan card</div>
+        <div class="val">Annual only on this surface (no toggle — keep it minimal). 3 features max. Same pricing as Surface B.</div>
+      </div>
+      <div class="spec-row">
+        <div class="key">Primary CTA</div>
+        <div class="val">
+          <span class="en">Get Plus — Save 33%</span>
+          <span class="vi">Nhận Plus — Tiết kiệm 33%</span>
+        </div>
+      </div>
+      <div class="spec-row">
+        <div class="key">Secondary action</div>
+        <div class="val">
+          <span class="en">Maybe later</span>
+          <span class="vi">Để sau</span>
+          <em style="color:var(--gray-400);font-size:11px;display:block;margin-top:4px">Closes sheet, returns to free tier (limit remains, action stays blocked).</em>
+        </div>
+      </div>
+      <div class="spec-row">
+        <div class="key">Sheet behavior</div>
+        <div class="val">Bottom sheet, max-height 78% screen. Drag-down to dismiss = "Maybe later". Tap on backdrop = same. Grabber visible at top.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  Petio paywall — copy spec · 2026-05-08 · Companion brief: <code>docs/product/paywall-content-brief_2026-05-08.md</code>
+</footer>
+
+<script>
+  /* ---- locale ---- */
+  function setLocale(loc) {
+    document.body.dataset.locale = loc;
+    document.querySelectorAll('.loc-btn').forEach(b => {
+      b.classList.toggle('active', b.dataset.loc === loc);
+    });
+  }
+  /* ---- plan ---- */
+  function setPlan(plan) {
+    document.body.dataset.plan = plan;
+    document.getElementById('pl-annual').classList.toggle('active', plan === 'annual');
+    document.getElementById('pl-monthly').classList.toggle('active', plan === 'monthly');
+    const isAnnual = plan === 'annual';
+    document.getElementById('planToggle').classList.toggle('on', isAnnual);
+    document.querySelectorAll('.js-annual-only').forEach(el => el.style.display = isAnnual ? '' : 'none');
+    document.querySelectorAll('.js-monthly-only').forEach(el => el.style.display = isAnnual ? 'none' : '');
+    document.querySelectorAll('.js-plan-annual').forEach(el => el.style.display = isAnnual ? '' : 'none');
+    document.querySelectorAll('.js-plan-monthly').forEach(el => el.style.display = isAnnual ? 'none' : '');
+  }
+  function togglePlan() {
+    setPlan(document.body.dataset.plan === 'annual' ? 'monthly' : 'annual');
+  }
+  /* ---- contextual trigger ---- */
+  function setCtx(trigger) {
+    document.body.dataset.ctx = trigger;
+    ['scan','chat','pet','memory','doc'].forEach(t => {
+      const btn = document.getElementById('ctx-' + t);
+      if (btn) btn.classList.toggle('active', t === trigger);
+      document.querySelectorAll('.ctx-' + t + '-only').forEach(el => el.style.display = (t === trigger) ? '' : 'none');
+    });
+  }
+  /* ---- onboarding slide ---- */
+  const onbSpecs = {
+    1: {
+      eyebrow: { en: "Peti <strong>knows your pet</strong>", vi: "Peti <strong>hiểu thú cưng của bạn</strong>" },
+      desc:    { en: "Ask anything about your pet's food, behavior, or health — answers tailored to their breed, age, and allergies.",
+                 vi: "Hỏi bất cứ điều gì về ăn uống, hành vi hay sức khỏe — câu trả lời riêng cho giống, tuổi và dị ứng của bé." },
+      cardTitle: { en: "<strong>Peti chat:</strong> answers tailored to your pet", vi: "<strong>Peti chat:</strong> câu trả lời riêng cho bé" },
+      cardBody:  { en: "Personalized to your pet's breed, age, and allergies — not a generic chatbot.",
+                   vi: "Cá nhân hóa theo giống, tuổi, dị ứng của bé — không phải chatbot thông thường." },
+      cta:       { en: "See what's next", vi: "Xem tiếp" },
+      visual:    "Phone showing Peti chat answering 'Is chocolate ok for Max?' with Max's profile bubble visible. Warm peach/cream background."
+    },
+    2: {
+      eyebrow: { en: "Scan <strong>before they eat it</strong>", vi: "Quét <strong>trước khi cho ăn</strong>" },
+      desc:    { en: "Point your camera at any pet food. Petio flags allergens specific to your pet — not generic warnings.",
+                 vi: "Hướng camera vào bất kỳ thức ăn nào. Petio cảnh báo dị ứng riêng cho bé — không phải lời khuyên chung." },
+      cardTitle: { en: "<strong>Scanner:</strong> safe-for-your-pet, not generic", vi: "<strong>Scanner:</strong> an toàn cho bé, không chung chung" },
+      cardBody:  { en: "Reads the label, cross-checks your pet's allergens, gives you a Safe / Caution / Unsafe verdict in seconds.",
+                   vi: "Đọc nhãn, đối chiếu dị ứng của bé, đưa ra kết luận An toàn / Lưu ý / Không an toàn trong vài giây." },
+      cta:       { en: "See what's next", vi: "Xem tiếp" },
+      visual:    "Scanner viewfinder over a treat bag with 'Unsafe for Max — contains chicken' pill in red."
+    },
+    3: {
+      eyebrow: { en: "Their whole story, <strong>in one place</strong>", vi: "Cả hành trình của bé, <strong>ở một nơi</strong>" },
+      desc:    { en: "Photos, vet docs, and milestones — saved and searchable, so nothing important gets lost.",
+                 vi: "Ảnh, hồ sơ thú y và cột mốc — lưu và tìm được, để không bỏ lỡ điều gì quan trọng." },
+      cardTitle: { en: "<strong>Memories + Documents:</strong> everything in one timeline", vi: "<strong>Kỷ niệm + Tài liệu:</strong> mọi thứ trên một dòng thời gian" },
+      cardBody:  { en: "Vet visits, vaccinations, photos, milestones — searchable by date and pet.",
+                   vi: "Lần khám, tiêm phòng, ảnh, cột mốc — tìm theo ngày và theo bé." },
+      cta:       { en: "Continue to Plus", vi: "Tiếp tục đến Plus" },
+      visual:    "Memory timeline tile with date scrubber. Show 3 photo thumbnails + a vet doc icon spread across a horizontal scrubber."
+    }
+  };
+  function setOnb(slide) {
+    document.body.dataset.onb = slide;
+    [1,2,3].forEach(n => {
+      const btn = document.getElementById('onb-' + n);
+      if (btn) btn.classList.toggle('active', n === slide);
+      document.querySelectorAll('.onb-slide[data-slide="' + n + '"]').forEach(el => el.style.display = (n === slide) ? '' : 'none');
+      document.querySelectorAll('.dot-' + n).forEach(el => el.classList.toggle('active', n === slide));
+      document.querySelectorAll('.onb-cta-' + n).forEach(el => el.style.display = (n === slide) ? '' : 'none');
+    });
+    /* update spec panel */
+    document.getElementById('slide-num').textContent = slide;
+    document.getElementById('spec-a-key').textContent = slide;
+    document.getElementById('spec-a-key2').textContent = slide;
+    document.getElementById('spec-a-key3').textContent = slide;
+    const s = onbSpecs[slide];
+    document.getElementById('spec-a-eyebrow').innerHTML =
+      '<span class="en">' + s.eyebrow.en + '</span><span class="vi">' + s.eyebrow.vi + '</span>';
+    document.getElementById('spec-a-desc').innerHTML =
+      '<span class="en">' + s.desc.en + '</span><span class="vi">' + s.desc.vi + '</span>';
+    document.getElementById('spec-a-cardtitle').innerHTML =
+      '<span class="en">' + s.cardTitle.en + '</span><span class="vi">' + s.cardTitle.vi + '</span>';
+    document.getElementById('spec-a-cardbody').innerHTML =
+      '<span class="en">' + s.cardBody.en + '</span><span class="vi">' + s.cardBody.vi + '</span>';
+    document.getElementById('spec-a-cta').innerHTML =
+      '<span class="en">' + s.cta.en + '</span><span class="vi">' + s.cta.vi + '</span>';
+    document.getElementById('spec-a-visual').textContent = s.visual;
+  }
+  /* init spec panel */
+  setOnb(1);
+</script>
+</body>
+</html>
