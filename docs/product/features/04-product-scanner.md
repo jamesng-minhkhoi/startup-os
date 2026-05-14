@@ -1,5 +1,7 @@
 # Feature: Product Scanner
-**Last updated**: 2026-04-12 | **Status**: Built — accuracy gap, share mechanic missing, dead buttons
+**Last updated**: 2026-05-14 | **Status**: Built — accuracy gap, share mechanic missing, dead buttons
+
+> **Launch blocker**: A third-party barcode product database (Open Food Facts) MUST be integrated before launch. LLM-only barcode inference is insufficient for a safety-critical feature.
 
 ---
 
@@ -158,8 +160,7 @@ flowchart TD
 
 ## Open Questions
 
-| Question | Owner |
-|----------|-------|
-| Should we integrate a barcode product database at launch or post-launch? | James (eng) — post-launch decision |
-| If a user has multiple pets, which pet's profile does the scanner check against? All of them, or the last selected? | James + Ngoc (design/UX) |
-| What's the right UI for "this product is safe for Max but unsafe for Luna"? | Ngoc (design) |
+| Question | Answer |
+|----------|---------|
+| Barcode product database at launch? | **YES — must ship at launch.** LLM inference is insufficient for a safety-critical feature. Integrate Open Food Facts (or equivalent) before shipping. |
+| Multi-pet: which profile to check against? | If no specific pet is selected in context, check against **all** pets. If any pet flags the product as unsafe, alert the user. |

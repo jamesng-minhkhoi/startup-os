@@ -70,6 +70,7 @@
 | Pet Profiles | [02-pet-profiles.md](docs/product/features/02-pet-profiles.md) | Everyone — ⚠️ missing allergen fields |
 | AI Chat | [03-ai-chat.md](docs/product/features/03-ai-chat.md) | Everyone |
 | Product Scanner | [04-product-scanner.md](docs/product/features/04-product-scanner.md) | Everyone — ⚠️ dead buttons, accuracy gap |
+| **Product Intelligence Pipeline** | [04b-product-intelligence-pipeline.md](docs/product/features/04b-product-intelligence-pipeline.md) | ⚠️ **NEW** — launch blocker, must ship with OPFF primary |
 | Memories | [05-memories.md](docs/product/features/05-memories.md) | Everyone |
 | Health & Statistics | [06-health-statistics.md](docs/product/features/06-health-statistics.md) | James + Ngoc |
 | Paywall & Subscriptions | [07-paywall-subscriptions.md](docs/product/features/07-paywall-subscriptions.md) | James — ⚠️ pricing needs update in RevenueCat |
