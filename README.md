@@ -77,6 +77,12 @@ Edit the files in `context/` with your company, product, market, customer, and m
 ```
 startup-os/
 ├── CLAUDE.md              # Master orchestrator — ties all skills together
+├── TEAM-GUIDE.md          # Team onboarding (Vietnamese)
+├── calendar.md            # Single source of truth for important dates
+├── calendar-archive/      # Monthly archives of completed calendar items
+├── weekly/                # One .md per ISO week — owners' weekly notes
+│   ├── _template.md       # Template for new weeks
+│   └── YYYY-WW.md         # Each week's file (auto-created Fridays)
 ├── .claude/commands/      # 13 slash command workflows
 ├── context/               # Business context (shared state across sessions)
 │   ├── company.md         # Vision, team, funding stage
@@ -84,7 +90,12 @@ startup-os/
 │   ├── market.md          # Market size, competitors, trends
 │   ├── customers.md       # ICP, JTBD, interview insights
 │   └── metrics.md         # North Star, OKRs, financials
-└── outputs/               # Generated deliverables organized by function
+├── docs/                  # Persistent team deliverables (specs, strategies, plans)
+│   ├── product/features/  # Feature specs, PRDs
+│   ├── strategy/          # Positioning, GTM, partnership playbooks
+│   ├── marketing/         # Launch plans, growth playbooks, content strategy
+│   └── finance/           # Financial models, equity proposals
+└── outputs/               # Generated workflow outputs (research, one-offs)
     ├── strategy/
     ├── product/
     ├── marketing/
@@ -94,6 +105,74 @@ startup-os/
     ├── sales/
     └── hiring/
 ```
+
+## Document Map
+
+### `docs/` — Team Deliverables & Decisions
+
+#### Product — "What are we building?"
+
+| Feature | Spec | Who should read |
+|---------|------|----------------|
+| Onboarding & Auth | [01-onboarding-auth.md](docs/product/features/01-onboarding-auth.md) | Everyone |
+| Pet Profiles | [02-pet-profiles.md](docs/product/features/02-pet-profiles.md) | Everyone |
+| AI Chat | [03-ai-chat.md](docs/product/features/03-ai-chat.md) | Everyone |
+| Product Scanner | [04-product-scanner.md](docs/product/features/04-product-scanner.md) | Everyone |
+| Product Intelligence Pipeline | [04b-product-intelligence-pipeline.md](docs/product/features/04b-product-intelligence-pipeline.md) | Launch blocker |
+| Memories | [05-memories.md](docs/product/features/05-memories.md) | Everyone |
+| Health & Statistics | [06-health-statistics.md](docs/product/features/06-health-statistics.md) | James + Ngoc |
+| Paywall & Subscriptions | [07-paywall-subscriptions.md](docs/product/features/07-paywall-subscriptions.md) | James |
+| Scanner Share Card *(planned)* | [08-scanner-share-card.md](docs/product/features/08-scanner-share-card.md) | Ngoc + James |
+| Family Sync | [09-family-sync.md](docs/product/features/09-family-sync.md) | Everyone |
+| Documents | [10-documents.md](docs/product/features/10-documents.md) | Everyone |
+
+#### Strategy — "Why are we doing this?"
+
+| Doc | What it covers |
+|-----|---------------|
+| [Petio Positioning](docs/strategy/petio-positioning.md) | What Petio is, who it's for (4 segments), pricing, success metrics |
+| [Competitive Edge](docs/strategy/competitive-edge.md) | Head-to-head vs ChatGPT / Hapu / AskVet / PawHub, our moat |
+| [VN Distribution Partnerships](docs/strategy/vn-distribution-partnerships.md) | Rev share affiliate model (20/25/30%), outreach templates |
+
+#### Marketing — "How do we get users?"
+
+| Doc | What it covers |
+|-----|---------------|
+| [US Launch Plan](docs/marketing/us-launch-plan.md) | Channels, content formats, pre-launch checklist, launch week |
+| [VN Launch Plan](docs/marketing/vn-launch-plan.md) | Vietnam-specific June 14 launch: Play Store, TikTok, FB groups, KOLs |
+| [Vietnam Growth Plan](docs/marketing/vietnam-growth-plan.md) | 90-day 10K user plan: phase targets, channel playbook |
+
+#### Finance
+
+| Doc | What it covers |
+|-----|---------------|
+| [Equity Restructuring Proposal](docs/finance/equity-restructuring-proposal_2026-04-09.md) | Draft equity split proposal |
+
+### `outputs/` — Research & Workflow Outputs
+
+| Area | Key files |
+|------|-----------|
+| Product research | [Discovery (Original)](outputs/product/discovery_petio_2026-04-02.md) · [Discovery (AI Pivot)](outputs/product/discovery_petio_ai-pivot_2026-04-02.md) · [Secondary Research](outputs/product/secondary_research_petio_2026-04-02.md) |
+| Strategy research | [VN Competitor Research](outputs/strategy/vietnam-competitor-research_2026-04-07.md) · [Validation Assessment](outputs/strategy/petio-validation-assessment.md) |
+| Marketing research | [Growth Loops Analysis](outputs/marketing/growth-loops_petio_2026-04-12.md) |
+| Operations log | [Sprint Status (Apr 2–7)](outputs/operations/sprint-status_2026-04-07.md) |
+
+### `context/` — Business Intelligence
+
+| File | Purpose |
+|------|---------|
+| [company.md](context/company.md) | Vision, mission, team, equity, finances |
+| [product.md](context/product.md) | Features, tech stack, roadmap |
+| [market.md](context/market.md) | TAM/SAM/SOM, competitors, trends |
+| [customers.md](context/customers.md) | 4 segments, JTBD, growth roles, messaging |
+| [metrics.md](context/metrics.md) | North Star, AARRR targets, OKRs, guardrails |
+
+## Vietnam Strategy — Reading Order
+
+1. **[Vietnam Competitor Research](outputs/strategy/vietnam-competitor-research_2026-04-07.md)** — Who we're up against (PawHub is the threat)
+2. **[Vietnam Growth Plan](docs/marketing/vietnam-growth-plan.md)** — Channels, TikTok formula, blog topics, 90-day 10K plan
+3. **[VN Distribution Partnerships](docs/strategy/vn-distribution-partnerships.md)** — Rev share model + decisions
+4. **[VN Launch Plan](docs/marketing/vn-launch-plan.md)** — June 14 Vietnam-specific execution checklist
 
 ## How It Works
 

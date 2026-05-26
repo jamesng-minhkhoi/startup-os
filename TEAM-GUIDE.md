@@ -4,7 +4,9 @@
 
 Repo này là **bộ não chung** của team Petio. Tất cả thông tin về sản phẩm, khách hàng, thị trường, và kế hoạch đều được lưu ở đây. Claude tự động đọc và hiểu toàn bộ bối cảnh — không cần giải thích lại từ đầu mỗi lần chat.
 
-> **Luôn bắt đầu ở [`DASHBOARD.md`](DASHBOARD.md)** — trang chủ của team. Cho bạn biết: trạng thái dự án, việc cần làm của từng người, quyết định đang chờ, và link đến tất cả tài liệu.
+> **Luôn bắt đầu ở 2 nơi:**
+> - **[`weekly/`](weekly/)** — file tuần hiện tại (ví dụ `weekly/2026-W22.md`). Bản tóm tắt tuần: TL;DR, số liệu, ship được gì, bets tuần tới.
+> - **[`calendar.md`](calendar.md)** — tất cả deadline & ngày quan trọng. Email Friday 5pm sẽ tự tổng hợp 2 file này.
 
 ---
 
@@ -22,13 +24,29 @@ Tất cả đều kết nối vào cùng repo này. Output được lưu chung, 
 
 ## Cấu Trúc Repo
 
-### `DASHBOARD.md` — Trang chủ (mở đầu tiên)
+### `weekly/` — Note tuần (mở đầu tiên)
 
-Mỗi khi mở repo, đọc file này trước:
-- Trạng thái hiện tại + quyết định đang chờ
-- Việc cần làm của **từng người** (James / Vy / Ngoc) theo priority
-- Link đến tất cả tài liệu + document map theo chủ đề
-- Blockers và milestones
+Mỗi tuần có 1 file riêng: `weekly/YYYY-WW.md` (ví dụ `2026-W22.md` cho tuần 22 năm 2026). Bot tự tạo từ `_template.md` mỗi sáng Thứ Sáu.
+
+Mỗi file gồm:
+- **TL;DR** — 2-3 câu tóm tắt tuần
+- **Calendar** — tự động lấy từ `calendar.md` (overdue / tuần này / 30 ngày tới)
+- **North Star** — chỉ số chính tuần đó
+- **Numbers** — bảng metrics (downloads, signups, retention, etc.)
+- **What shipped** — đã ship gì (app, design, marketing)
+- **Voice of customer** — người dùng nói gì
+- **Decisions made / pending** — quyết định đã/đang chờ
+- **Bets next week** — mỗi owner 1 bet trọng yếu
+- **Blockers** — bị kẹt ở đâu, ai unblock
+
+### `calendar.md` — Mốc thời gian quan trọng
+
+Single source of truth cho tất cả deadline:
+- **Commitments** — sự kiện có ngày cụ thể (launch, decisions, milestones)
+- **Recurring** — định kỳ (họp tuần Thứ Sáu 5pm, monthly metrics review)
+- **Out of office** — ai đi vắng khi nào
+
+Edit trực tiếp, hoặc nhờ Claude: *"add to calendar: June 7, brand guidelines locked, design, Ngoc"*.
 
 ### `context/` — Trí nhớ chung (5 file)
 
@@ -55,7 +73,7 @@ Mỗi khi mở repo, đọc file này trước:
 
 ### File `PENDING-REVIEW_*.md` — Cần Duyệt
 
-File đặt tên `PENDING-REVIEW_[tên].md` = đang chờ ai đó duyệt. Xem DASHBOARD.md → bảng "Pending Decisions" để biết ai chờ gì.
+File đặt tên `PENDING-REVIEW_[tên].md` = đang chờ ai đó duyệt. Add vào bảng **Decisions pending** trong file tuần hiện tại (`weekly/YYYY-WW.md`) để team biết ai chờ gì.
 
 ---
 
@@ -64,35 +82,36 @@ File đặt tên `PENDING-REVIEW_[tên].md` = đang chờ ai đó duyệt. Xem D
 ### Hàng ngày
 
 ```
-1. git pull                          ← lấy updates từ team
-2. Mở DASHBOARD.md                   ← xem việc cần làm của mình
+1. git pull                                ← lấy updates từ team
+2. Mở weekly/YYYY-WW.md + calendar.md      ← xem tuần này có gì + deadline
 3. Làm việc (chạy workflow, viết content, research...)
 4. Cập nhật context/ nếu có info mới
-5. Nhờ Claude: "update DASHBOARD.md"  ← cập nhật trạng thái
-6. git commit + push                 ← team thấy được
+5. Nhờ Claude: "update weekly file"        ← cập nhật số liệu, bets, blockers
+6. git commit + push                       ← team thấy được
 ```
 
 ### Khi có quyết định cần team duyệt
 
 1. Tạo file `PENDING-REVIEW_[tên].md` — ghi rõ: ai review, quyết định gì, deadline
-2. Cập nhật DASHBOARD.md → bảng "Pending Decisions"
-3. Thông báo người cần review (Slack / tin nhắn)
-4. Sau khi duyệt: đổi tên bỏ `PENDING-REVIEW_` hoặc xóa nếu đã merge vào doc chính
+2. Add vào `calendar.md` (category=decision) với ngày deadline
+3. Add vào bảng **Decisions pending** trong file tuần hiện tại
+4. Thông báo người cần review (Slack / tin nhắn)
+5. Sau khi duyệt: đổi tên bỏ `PENDING-REVIEW_`, update status thành `done` trong calendar
 
 ### Khi hoàn thành sprint / milestone lớn
 
 1. Nhờ Claude: "update sprint status" → `outputs/operations/sprint-status_[date].md`
-2. Nhờ Claude: "update DASHBOARD.md" → action items, milestones, blockers
+2. Update file tuần hiện tại với: shipped items, decisions made, metrics
 3. Cập nhật `context/` nếu có thay đổi lớn (features, market data, metrics)
 
-### DASHBOARD.md vs Sprint Status — khác nhau thế nào?
+### Weekly notes vs Calendar — khác nhau thế nào?
 
-| | DASHBOARD.md | Sprint Status |
-|--|-------------|--------------|
-| **Vai trò** | Bảng hành động — việc cần làm **bây giờ** | Lịch sử — việc đã **hoàn thành** |
-| **Ai cập nhật** | Cả team, sau mỗi ngày làm việc | James, khi kết thúc sprint |
-| **Chứa gì** | Action items theo người, pending decisions, blockers | Chi tiết công việc đã xong, quyết định đã đưa ra |
-| **Xem khi nào** | Mỗi ngày | Khi cần review lại sprint trước |
+| | `weekly/YYYY-WW.md` | `calendar.md` |
+|--|---------------------|----------------|
+| **Vai trò** | Tóm tắt **tuần này** — narrative + metrics | Mốc thời gian xuyên suốt — deadline & milestone |
+| **Tần suất** | 1 file/tuần, tạo Thứ Sáu | 1 file duy nhất, edit liên tục |
+| **Chứa gì** | TL;DR, numbers, shipped, bets, blockers | Commitments có ngày, recurring, OOO |
+| **Email Friday 5pm dùng** | Để hiển thị note tuần (link) | Để render section "Calendar" trong email |
 
 ### Quy tắc đặt tên file
 
@@ -144,7 +163,7 @@ Mỗi workflow là một **quy trình nhiều bước** — bạn chỉ cần m�
 
 - **Code + deploy** — refactoring, features, bug fixes, CI/CD
 - **Strategy** — competitor research, GTM, positioning, financial modeling
-- **Ops** — sprint planning, status updates, dashboard maintenance
+- **Ops** — sprint planning, weekly notes, calendar maintenance
 - **Slash commands** — `/launch`, `/discover`, `/compete`, etc. (chỉ có trên CLI)
 
 ### Vy (Product / Marketing) — Claude Desktop + CoWork
@@ -204,8 +223,9 @@ Nói chuyện bình thường bằng tiếng Anh hoặc tiếng Việt. Không c
 ## Bắt Đầu Lần Đầu
 
 1. Nhờ James setup Claude Desktop cho bạn
-2. Mở **[`DASHBOARD.md`](DASHBOARD.md)** — xem tổng quan dự án
-3. Đọc 5 file trong `context/` để hiểu Petio đang ở đâu
-4. Xem "Action Items" trong DASHBOARD.md → bắt đầu từ task HIGH
-5. Thử gõ một prompt từ danh sách ở trên
-6. Khi có info mới → cập nhật `context/` → commit + push
+2. Mở file tuần hiện tại trong **[`weekly/`](weekly/)** — xem tuần này có gì
+3. Mở **[`calendar.md`](calendar.md)** — xem deadline sắp tới
+4. Đọc 5 file trong `context/` để hiểu Petio đang ở đâu
+5. Xem "Bets next week" trong weekly/ → bắt đầu từ bet của mình
+6. Thử gõ một prompt từ danh sách ở trên
+7. Khi có info mới → cập nhật `context/` → commit + push
