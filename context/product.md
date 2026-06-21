@@ -3,9 +3,11 @@
 ## Product Overview
 - **Product Name**: Petio
 - **Category**: AI-first pet care & wellness
-- **Platform**: Mobile (iOS & Android)
+- **Platform**: Mobile (iOS live · Android/Google Play not yet live)
+- **iOS App Store**: https://apps.apple.com/vn/app/petio-ai-pet-care-health/id6745301343
 - **Tech Stack**: React Native / Expo, Supabase
 - **Website**: https://petiogo.com (updated — reflects AI-first positioning)
+- **Public messaging**: see `docs/marketing/messaging-guardrails.md` — canonical "what Petio is/isn't" (scanner = food/product ingredient safety per pet profile, NOT a symptom diagnoser). Launch drafts converged on a sharper lead: "AI pet-health copilot = food safety scanner + context-aware AI chat" (pending founder sign-off as official positioning).
 
 ## Problem & Solution
 - **Core Problem**: Pet parents lack personalized, contextual guidance for their pet's behavior, wellness, and safety — they rely on generic Google searches, guesswork, and expensive vet visits for everyday questions.
