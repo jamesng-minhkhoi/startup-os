@@ -26,13 +26,15 @@ Don't skip a step — someone tries the app before they get an affiliate code.
 | Task | How often | Time |
 |---|---|---|
 | Find creator/press/partner emails | Weekly | 2–3h |
-| Send outreach emails | Daily | 30–45 min |
+| Send outreach emails — primary channel for creators, since Ha Vy's IG/TikTok accounts aren't warmed up yet and DMs may not land | Daily | 30–45 min |
 | Reply to people who write back | As it happens | — |
 | Give out lifetime-premium codes | As needed | 5 min each |
 | Send the trial + affiliate email once a creator's interested | As it happens | 10 min each |
 | Set up a RevenueCat code for each new affiliate | Once per creator | 5 min |
 | Check redemptions/revenue per code, update what's owed | Monthly | 30 min |
 | Reach out to shelters/vets | Weekly (weeks 5–6) | 1h |
+
+**Email vs. DM:** cold DMs from a brand-new/unwarmed IG or TikTok account are unreliable — they can land in "message requests" nobody checks, or get the account flagged before it's built any trust. Until the accounts are warmed up, treat email as the primary outreach channel and DM as a secondary attempt, not the other way around. Most creators in the 5K–50K range don't have a public email though — see the Contacts sheet's Email column for who actually has one.
 
 ### Ha Vy
 
